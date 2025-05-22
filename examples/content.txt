@@ -1,1 +1,1 @@
-
+Adaptive Architecture Case Study: This has been prepared for the first submission of the paper, which is available on ArXiv (https://arxiv.org/abs/2405.08032).
