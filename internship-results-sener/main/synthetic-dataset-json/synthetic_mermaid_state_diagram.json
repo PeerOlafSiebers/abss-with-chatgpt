@@ -1,0 +1,310 @@
+[
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A public bus transportation system where buses start from a terminal, move to different stops, pick up/drop off passengers, and return to the terminal.",
+        "output": "\n        stateDiagram-v2\n            [*] --> Terminal\n            Terminal --> BusStop1 : Move to Stop 1\n            BusStop1 --> BusStop2 : Move to Stop 2\n            BusStop2 --> BusStop3 : Move to Stop 3\n            BusStop3 --> Terminal : Return to Terminal\n            BusStop1 --> Terminal : Return to Terminal\n            BusStop2 --> Terminal : Return to Terminal\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A student registration process where a student applies for a course, gets reviewed, gets accepted or rejected, and then proceeds to enroll or apply again.",
+        "output": "\n        stateDiagram-v2\n            [*] --> Apply\n            Apply --> Review\n            Review --> Accept : Application Approved\n            Review --> Reject : Application Denied\n            Accept --> Enroll : Proceed to Enrollment\n            Reject --> Apply : Reapply\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A hospital patient management system where a patient checks in, undergoes diagnosis, receives treatment, and then gets discharged or referred for further treatment.",
+        "output": "\n        stateDiagram-v2\n            [*] --> CheckIn\n            CheckIn --> Diagnosis\n            Diagnosis --> Treatment : Diagnosis Completed\n            Treatment --> Discharge : Treatment Successful\n            Treatment --> Referral : Further Treatment Needed\n            Referral --> Diagnosis : Additional Diagnosis Required\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A bank loan approval process where an applicant submits an application, it is reviewed, and then it is either approved, rejected, or requires additional documentation.",
+        "output": "\n        stateDiagram-v2\n            [*] --> SubmitApplication\n            SubmitApplication --> Review\n            Review --> Approved : Application Approved\n            Review --> Rejected : Application Rejected\n            Review --> AdditionalDocs : More Documents Needed\n            AdditionalDocs --> Review : Resubmit with Documents\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A pandemic response system where an outbreak is detected, response strategies are developed, measures are implemented, and the situation is monitored until resolved or escalated.",
+        "output": "\n        stateDiagram-v2\n            [*] --> OutbreakDetected\n            OutbreakDetected --> DevelopResponse\n            DevelopResponse --> ImplementMeasures : Response Plan Created\n            ImplementMeasures --> MonitorSituation : Measures in Place\n            MonitorSituation --> Resolved : Situation Under Control\n            MonitorSituation --> Escalate : Situation Worsens\n            Escalate --> DevelopResponse : Revise Response Plan\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A university course management system where courses are created, students enroll, classes are conducted, and students either pass or fail.",
+        "output": "\n        stateDiagram-v2\n            [*] --> CourseCreation\n            CourseCreation --> Enrollment : Courses Available\n            Enrollment --> ConductClasses : Students Enrolled\n            ConductClasses --> Pass : Successful Completion\n            ConductClasses --> Fail : Unsuccessful Completion\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A disaster management system where a disaster is identified, emergency services are deployed, relief is provided, and recovery efforts are initiated.",
+        "output": "\n        stateDiagram-v2\n            [*] --> DisasterIdentified\n            DisasterIdentified --> DeployServices : Emergency Declared\n            DeployServices --> ProvideRelief : Services in Action\n            ProvideRelief --> RecoveryEfforts : Immediate Needs Met\n            RecoveryEfforts --> Normalcy : Recovery Completed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A hotel booking system where a guest searches for a room, makes a reservation, checks in, stays, and checks out.",
+        "output": "\n        stateDiagram-v2\n            [*] --> SearchRoom\n            SearchRoom --> Reservation : Room Available\n            Reservation --> CheckIn : Reservation Confirmed\n            CheckIn --> Stay : Guest Checked In\n            Stay --> CheckOut : Stay Completed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A marketing campaign process where a campaign is planned, launched, monitored, and evaluated for success or adjustments.",
+        "output": "\n        stateDiagram-v2\n            [*] --> PlanCampaign\n            PlanCampaign --> Launch : Campaign Ready\n            Launch --> Monitor : Campaign Live\n            Monitor --> EvaluateSuccess : Campaign Monitored\n            EvaluateSuccess --> Success : Campaign Successful\n            EvaluateSuccess --> Adjust : Campaign Needs Improvement\n            Adjust --> Monitor : Re-launch Campaign\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A product development process where ideas are generated, prototypes are created, products are tested, and then either approved for production or sent back for redesign.",
+        "output": "\n        stateDiagram-v2\n            [*] --> IdeaGeneration\n            IdeaGeneration --> PrototypeCreation : Idea Selected\n            PrototypeCreation --> Testing : Prototype Ready\n            Testing --> Approval : Testing Successful\n            Testing --> Redesign : Testing Failed\n            Redesign --> PrototypeCreation : Redesign Completed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A flight booking system where a customer searches for flights, books a ticket, checks in, boards the flight, and either takes off or the flight is delayed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> SearchFlight\n            SearchFlight --> BookTicket : Flight Available\n            BookTicket --> CheckIn : Ticket Booked\n            CheckIn --> Board : Checked In\n            Board --> TakeOff : Flight On Time\n            Board --> Delay : Flight Delayed\n            Delay --> TakeOff : Delayed Flight Takes Off\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A retail store inventory system where products are stocked, items are sold, inventory is checked, and orders are placed to restock.",
+        "output": "\n        stateDiagram-v2\n            [*] --> StockInventory\n            StockInventory --> SellItems : Items Available\n            SellItems --> CheckInventory : Sales Completed\n            CheckInventory --> Restock : Inventory Low\n            Restock --> StockInventory : Order Received\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A food delivery app where a customer places an order, the restaurant prepares the food, the delivery is picked up, and the food is delivered to the customer.",
+        "output": "\n        stateDiagram-v2\n            [*] --> PlaceOrder\n            PlaceOrder --> PrepareFood : Order Received\n            PrepareFood --> PickupDelivery : Food Ready\n            PickupDelivery --> Deliver : Delivery Picked Up\n            Deliver --> Complete : Food Delivered\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An online shopping system where a customer browses products, adds items to the cart, checks out, makes payment, and receives the order.",
+        "output": "\n        stateDiagram-v2\n            [*] --> BrowseProducts\n            BrowseProducts --> AddToCart : Items Selected\n            AddToCart --> Checkout : Ready to Purchase\n            Checkout --> MakePayment : Payment Information Provided\n            MakePayment --> ReceiveOrder : Order Placed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A healthcare appointment scheduling system where a patient books an appointment, receives a confirmation, attends the appointment, and provides feedback.",
+        "output": "\n        stateDiagram-v2\n            [*] --> BookAppointment\n            BookAppointment --> ConfirmAppointment : Slot Available\n            ConfirmAppointment --> AttendAppointment : Appointment Confirmed\n            AttendAppointment --> ProvideFeedback : Appointment Completed\n            ProvideFeedback --> [*] : Feedback Submitted\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A university grading system where a student submits an assignment, it is graded by the instructor, the grade is posted, and the student views the grade.",
+        "output": "\n        stateDiagram-v2\n            [*] --> SubmitAssignment\n            SubmitAssignment --> GradeAssignment : Assignment Received\n            GradeAssignment --> PostGrade : Grading Completed\n            PostGrade --> ViewGrade : Grade Available\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An airport security process where a passenger checks in, passes through security, boards the flight, and departs.",
+        "output": "\n        stateDiagram-v2\n            [*] --> CheckIn\n            CheckIn --> SecurityCheck : Boarding Pass Issued\n            SecurityCheck --> Boarding : Cleared Security\n            Boarding --> Departure : Boarded Flight\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An event planning process where an event is planned, logistics are arranged, the event is conducted, and feedback is collected.",
+        "output": "\n        stateDiagram-v2\n            [*] --> PlanEvent\n            PlanEvent --> ArrangeLogistics : Event Details Finalized\n            ArrangeLogistics --> ConductEvent : Logistics in Place\n            ConductEvent --> CollectFeedback : Event Completed\n            CollectFeedback --> [*] : Feedback Received\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A banking transaction where a customer initiates a transfer, the bank processes the transfer, the funds are transferred, and the customer receives confirmation.",
+        "output": "\n        stateDiagram-v2\n            [*] --> InitiateTransfer\n            InitiateTransfer --> ProcessTransfer : Transfer Details Provided\n            ProcessTransfer --> TransferFunds : Transfer Authorized\n            TransferFunds --> ConfirmTransfer : Funds Transferred\n            ConfirmTransfer --> [*] : Confirmation Sent\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A construction project management system where a project is initiated, resources are allocated, work is performed, and the project is completed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> InitiateProject\n            InitiateProject --> AllocateResources : Project Approved\n            AllocateResources --> PerformWork : Resources Ready\n            PerformWork --> CompleteProject : Work Completed\n            CompleteProject --> [*] : Project Closed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A car rental system where a customer books a car, picks up the car, uses it, and returns it to the rental company.",
+        "output": "\n        stateDiagram-v2\n            [*] --> BookCar\n            BookCar --> PickupCar : Reservation Confirmed\n            PickupCar --> UseCar : Car Collected\n            UseCar --> ReturnCar : Rental Period Completed\n            ReturnCar --> [*] : Car Returned\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A voting process where a voter registers, casts a vote, the vote is counted, and the result is announced.",
+        "output": "\n        stateDiagram-v2\n            [*] --> RegisterVoter\n            RegisterVoter --> CastVote : Voter Registered\n            CastVote --> CountVote : Vote Submitted\n            CountVote --> AnnounceResult : Votes Counted\n            AnnounceResult --> [*] : Result Declared\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An insurance claim process where a policyholder files a claim, the claim is reviewed, the claim is either approved or denied, and the policyholder is notified.",
+        "output": "\n        stateDiagram-v2\n            [*] --> FileClaim\n            FileClaim --> ReviewClaim : Claim Submitted\n            ReviewClaim --> ApproveClaim : Claim Valid\n            ReviewClaim --> DenyClaim : Claim Invalid\n            ApproveClaim --> NotifyPolicyholder : Claim Approved\n            DenyClaim --> NotifyPolicyholder : Claim Denied\n            NotifyPolicyholder --> [*] : Notification Sent\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A hotel check-in process where a guest arrives, checks in, stays, and checks out.",
+        "output": "\n        stateDiagram-v2\n            [*] --> Arrive\n            Arrive --> CheckIn : At Reception\n            CheckIn --> Stay : Room Assigned\n            Stay --> CheckOut : Stay Completed\n            CheckOut --> [*] : Leave Hotel\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A movie rental system where a user browses movies, rents a movie, watches it, and returns it.",
+        "output": "\n        stateDiagram-v2\n            [*] --> BrowseMovies\n            BrowseMovies --> RentMovie : Movie Selected\n            RentMovie --> WatchMovie : Movie Rented\n            WatchMovie --> ReturnMovie : Movie Watched\n            ReturnMovie --> [*] : Movie Returned\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An IT support ticket system where a user submits a ticket, the issue is diagnosed, the issue is resolved, and the ticket is closed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> SubmitTicket\n            SubmitTicket --> DiagnoseIssue : Ticket Created\n            DiagnoseIssue --> ResolveIssue : Issue Identified\n            ResolveIssue --> CloseTicket : Issue Resolved\n            CloseTicket --> [*] : Ticket Closed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An employee onboarding process where an offer is extended, the employee accepts, completes paperwork, undergoes orientation, and starts work.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ExtendOffer\n            ExtendOffer --> AcceptOffer : Offer Sent\n            AcceptOffer --> CompletePaperwork : Offer Accepted\n            CompletePaperwork --> Orientation : Paperwork Completed\n            Orientation --> StartWork : Orientation Done\n            StartWork --> [*] : Employee Starts\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A patient discharge process where a patient completes treatment, receives discharge instructions, schedules a follow-up, and leaves the hospital.",
+        "output": "\n        stateDiagram-v2\n            [*] --> CompleteTreatment\n            CompleteTreatment --> DischargeInstructions : Treatment Successful\n            DischargeInstructions --> ScheduleFollowUp : Instructions Given\n            ScheduleFollowUp --> LeaveHospital : Follow-up Scheduled\n            LeaveHospital --> [*] : Discharged\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A public transportation ticketing system where a passenger selects a route, purchases a ticket, uses the ticket, and the ticket expires after the trip.",
+        "output": "\n        stateDiagram-v2\n            [*] --> SelectRoute\n            SelectRoute --> PurchaseTicket : Route Selected\n            PurchaseTicket --> UseTicket : Ticket Purchased\n            UseTicket --> TripComplete : Ticket Validated\n            TripComplete --> TicketExpires : Trip Finished\n            TicketExpires --> [*] : Ticket Expired\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A healthcare triage system where a patient arrives, is assessed, treatment is prioritized, and the patient is treated or referred.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ArriveAtHospital\n            ArriveAtHospital --> Assessment : Patient Arrived\n            Assessment --> PrioritizeTreatment : Severity Evaluated\n            PrioritizeTreatment --> TreatPatient : Immediate Treatment\n            PrioritizeTreatment --> Referral : Referred for Further Care\n            TreatPatient --> [*] : Treatment Completed\n            Referral --> [*] : Referred\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A travel itinerary planning system where a user selects destinations, books accommodations, plans activities, and starts the trip.",
+        "output": "\n        stateDiagram-v2\n            [*] --> SelectDestinations\n            SelectDestinations --> BookAccommodations : Destinations Chosen\n            BookAccommodations --> PlanActivities : Accommodations Booked\n            PlanActivities --> StartTrip : Activities Planned\n            StartTrip --> [*] : Trip Started\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A hotel housekeeping process where rooms are cleaned, supplies are restocked, inspections are conducted, and rooms are marked as ready.",
+        "output": "\n        stateDiagram-v2\n            [*] --> CleanRoom\n            CleanRoom --> RestockSupplies : Room Cleaned\n            RestockSupplies --> ConductInspection : Supplies Restocked\n            ConductInspection --> MarkAsReady : Room Inspected\n            MarkAsReady --> [*] : Room Ready\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An e-commerce return process where a customer initiates a return, ships the item, the item is received, and the refund is processed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> InitiateReturn\n            InitiateReturn --> ShipItem : Return Authorized\n            ShipItem --> ReceiveItem : Item Shipped\n            ReceiveItem --> ProcessRefund : Item Received\n            ProcessRefund --> [*] : Refund Issued\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A ride-sharing app where a rider requests a ride, the driver is assigned, the ride is completed, and the rider provides feedback.",
+        "output": "\n        stateDiagram-v2\n            [*] --> RequestRide\n            RequestRide --> AssignDriver : Ride Requested\n            AssignDriver --> CompleteRide : Driver Assigned\n            CompleteRide --> ProvideFeedback : Ride Completed\n            ProvideFeedback --> [*] : Feedback Provided\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A job application process where a candidate submits an application, the application is reviewed, interviews are conducted, and a decision is made.",
+        "output": "\n        stateDiagram-v2\n            [*] --> SubmitApplication\n            SubmitApplication --> ReviewApplication : Application Received\n            ReviewApplication --> ConductInterviews : Application Shortlisted\n            ConductInterviews --> MakeDecision : Interviews Conducted\n            MakeDecision --> OfferJob : Offer Extended\n            MakeDecision --> RejectCandidate : Application Rejected\n            OfferJob --> [*] : Job Offered\n            RejectCandidate --> [*] : Rejection Notified\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A vehicle maintenance process where a vehicle is brought in for service, the service is performed, the vehicle is inspected, and then returned to the owner.",
+        "output": "\n        stateDiagram-v2\n            [*] --> BringVehicle\n            BringVehicle --> PerformService : Vehicle Arrived\n            PerformService --> InspectVehicle : Service Completed\n            InspectVehicle --> ReturnVehicle : Inspection Passed\n            ReturnVehicle --> [*] : Vehicle Returned\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A financial investment process where an investor researches options, invests in a portfolio, monitors performance, and adjusts the portfolio as needed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ResearchOptions\n            ResearchOptions --> InvestPortfolio : Options Analyzed\n            InvestPortfolio --> MonitorPerformance : Investment Made\n            MonitorPerformance --> AdjustPortfolio : Performance Evaluated\n            AdjustPortfolio --> MonitorPerformance : Portfolio Adjusted\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A library book borrowing system where a user searches for a book, checks it out, reads it, and returns it.",
+        "output": "\n        stateDiagram-v2\n            [*] --> SearchBook\n            SearchBook --> CheckoutBook : Book Found\n            CheckoutBook --> ReadBook : Book Borrowed\n            ReadBook --> ReturnBook : Reading Completed\n            ReturnBook --> [*] : Book Returned\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A restaurant order process where a customer places an order, the order is prepared, the order is served, and the customer pays the bill.",
+        "output": "\n        stateDiagram-v2\n            [*] --> PlaceOrder\n            PlaceOrder --> PrepareOrder : Order Taken\n            PrepareOrder --> ServeOrder : Food Prepared\n            ServeOrder --> PayBill : Food Served\n            PayBill --> [*] : Payment Completed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An employee performance review process where an employee is evaluated, feedback is given, goals are set, and the review is completed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> EvaluatePerformance\n            EvaluatePerformance --> GiveFeedback : Evaluation Done\n            GiveFeedback --> SetGoals : Feedback Provided\n            SetGoals --> CompleteReview : Goals Agreed\n            CompleteReview --> [*] : Review Completed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A project management system where a project is planned, tasks are assigned, progress is tracked, and the project is completed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> PlanProject\n            PlanProject --> AssignTasks : Project Plan Ready\n            AssignTasks --> TrackProgress : Tasks Distributed\n            TrackProgress --> CompleteProject : All Tasks Done\n            CompleteProject --> [*] : Project Closed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A clinical trial process where participants are enrolled, treatments are administered, data is collected, and the trial is analyzed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> EnrollParticipants\n            EnrollParticipants --> AdministerTreatment : Participants Enrolled\n            AdministerTreatment --> CollectData : Treatment Given\n            CollectData --> AnalyzeTrial : Data Collected\n            AnalyzeTrial --> [*] : Trial Analyzed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A website development process where requirements are gathered, design is created, development is done, testing is performed, and the site is launched.",
+        "output": "\n        stateDiagram-v2\n            [*] --> GatherRequirements\n            GatherRequirements --> CreateDesign : Requirements Analyzed\n            CreateDesign --> DevelopSite : Design Approved\n            DevelopSite --> TestSite : Development Completed\n            TestSite --> LaunchSite : Testing Successful\n            LaunchSite --> [*] : Site Launched\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A sales process where a lead is generated, a sales pitch is made, the deal is negotiated, and the sale is closed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> GenerateLead\n            GenerateLead --> MakePitch : Lead Identified\n            MakePitch --> NegotiateDeal : Pitch Delivered\n            NegotiateDeal --> CloseSale : Agreement Reached\n            CloseSale --> [*] : Sale Completed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A customer support process where a customer contacts support, the issue is diagnosed, a solution is provided, and the case is closed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ContactSupport\n            ContactSupport --> DiagnoseIssue : Support Contacted\n            DiagnoseIssue --> ProvideSolution : Issue Identified\n            ProvideSolution --> CloseCase : Solution Provided\n            CloseCase --> [*] : Case Closed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A logistics process where a shipment is scheduled, the package is picked up, it is transported, and it is delivered.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ScheduleShipment\n            ScheduleShipment --> PickupPackage : Shipment Scheduled\n            PickupPackage --> TransportPackage : Package Picked Up\n            TransportPackage --> DeliverPackage : Package In Transit\n            DeliverPackage --> [*] : Package Delivered\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An emergency response system where an emergency is reported, first responders are dispatched, the situation is assessed, and the emergency is resolved.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ReportEmergency\n            ReportEmergency --> DispatchResponders : Emergency Reported\n            DispatchResponders --> AssessSituation : Responders On Scene\n            AssessSituation --> ResolveEmergency : Situation Assessed\n            ResolveEmergency --> [*] : Emergency Resolved\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A public health vaccination campaign where a target population is identified, vaccines are distributed, vaccinations are administered, and coverage is monitored.",
+        "output": "\n        stateDiagram-v2\n            [*] --> IdentifyPopulation\n            IdentifyPopulation --> DistributeVaccines : Population Targeted\n            DistributeVaccines --> AdministerVaccinations : Vaccines Distributed\n            AdministerVaccinations --> MonitorCoverage : Vaccinations Completed\n            MonitorCoverage --> [*] : Campaign Monitored\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A sports event organization process where teams are invited, the venue is prepared, the event is held, and results are announced.",
+        "output": "\n        stateDiagram-v2\n            [*] --> InviteTeams\n            InviteTeams --> PrepareVenue : Teams Confirmed\n            PrepareVenue --> HoldEvent : Venue Ready\n            HoldEvent --> AnnounceResults : Event Completed\n            AnnounceResults --> [*] : Results Declared\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A water treatment process where water is collected, treated, tested, and distributed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> CollectWater\n            CollectWater --> TreatWater : Water Collected\n            TreatWater --> TestWater : Water Treated\n            TestWater --> DistributeWater : Testing Passed\n            DistributeWater --> [*] : Water Distributed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A software deployment process where code is developed, tested, deployed to staging, approved, and deployed to production.",
+        "output": "\n        stateDiagram-v2\n            [*] --> DevelopCode\n            DevelopCode --> TestCode : Code Written\n            TestCode --> DeployStaging : Tests Passed\n            DeployStaging --> ApproveDeployment : Staging Successful\n            ApproveDeployment --> DeployProduction : Approval Given\n            DeployProduction --> [*] : Code in Production\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A construction permit process where a permit application is submitted, reviewed, approved, and the permit is issued.",
+        "output": "\n        stateDiagram-v2\n            [*] --> SubmitApplication\n            SubmitApplication --> ReviewApplication : Application Received\n            ReviewApplication --> ApprovePermit : Requirements Met\n            ApprovePermit --> IssuePermit : Permit Approved\n            IssuePermit --> [*] : Permit Issued\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A patient referral system where a primary care doctor refers a patient to a specialist, the patient schedules an appointment, attends the appointment, and the specialist provides feedback.",
+        "output": "\n        stateDiagram-v2\n            [*] --> DoctorReferral\n            DoctorReferral --> ScheduleAppointment : Referral Made\n            ScheduleAppointment --> AttendAppointment : Appointment Scheduled\n            AttendAppointment --> SpecialistFeedback : Appointment Completed\n            SpecialistFeedback --> [*] : Feedback Provided\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A school admissions process where a student applies, the application is reviewed, an interview is conducted, and the student is either admitted or rejected.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ApplyToSchool\n            ApplyToSchool --> ReviewApplication : Application Submitted\n            ReviewApplication --> ConductInterview : Shortlisted\n            ConductInterview --> AdmitStudent : Interview Successful\n            ConductInterview --> RejectApplication : Interview Unsuccessful\n            AdmitStudent --> [*] : Admission Granted\n            RejectApplication --> [*] : Application Rejected\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A pharmaceutical drug approval process where a new drug is researched, clinical trials are conducted, regulatory approval is sought, and the drug is launched.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ResearchDrug\n            ResearchDrug --> ConductTrials : Research Completed\n            ConductTrials --> SeekApproval : Trials Successful\n            SeekApproval --> LaunchDrug : Approval Granted\n            LaunchDrug --> [*] : Drug Launched\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An educational course creation process where a course is designed, content is developed, the course is reviewed, and the course is published.",
+        "output": "\n        stateDiagram-v2\n            [*] --> DesignCourse\n            DesignCourse --> DevelopContent : Course Framework Created\n            DevelopContent --> ReviewCourse : Content Completed\n            ReviewCourse --> PublishCourse : Review Passed\n            PublishCourse --> [*] : Course Published\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A logistics supply chain process where raw materials are sourced, products are manufactured, items are distributed, and products reach customers.",
+        "output": "\n        stateDiagram-v2\n            [*] --> SourceMaterials\n            SourceMaterials --> ManufactureProducts : Materials Received\n            ManufactureProducts --> DistributeItems : Products Manufactured\n            DistributeItems --> ReachCustomers : Items Shipped\n            ReachCustomers --> [*] : Products Delivered\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A job training process where new hires are oriented, training is conducted, progress is evaluated, and certification is granted.",
+        "output": "\n        stateDiagram-v2\n            [*] --> Orientation\n            Orientation --> ConductTraining : New Hires Oriented\n            ConductTraining --> EvaluateProgress : Training Completed\n            EvaluateProgress --> GrantCertification : Evaluation Passed\n            GrantCertification --> [*] : Certification Granted\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A property rental process where a property is listed, prospective tenants inquire, viewings are scheduled, and the property is rented out.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ListProperty\n            ListProperty --> Inquiries : Property Listed\n            Inquiries --> ScheduleViewing : Interested Tenants\n            ScheduleViewing --> RentProperty : Viewings Completed\n            RentProperty --> [*] : Property Rented\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A disaster recovery plan where a disaster is declared, recovery steps are initiated, resources are mobilized, and normalcy is restored.",
+        "output": "\n        stateDiagram-v2\n            [*] --> DeclareDisaster\n            DeclareDisaster --> InitiateRecovery : Disaster Declared\n            InitiateRecovery --> MobilizeResources : Recovery Plan Activated\n            MobilizeResources --> RestoreNormalcy : Resources Deployed\n            RestoreNormalcy --> [*] : Normalcy Restored\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An online payment system where a user initiates a payment, the payment is processed, verified, and the transaction is completed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> InitiatePayment\n            InitiatePayment --> ProcessPayment : Payment Started\n            ProcessPayment --> VerifyPayment : Payment Processing\n            VerifyPayment --> CompleteTransaction : Verification Successful\n            CompleteTransaction --> [*] : Payment Completed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A mobile app development process where an idea is conceived, the app is designed, developed, tested, and launched.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ConceiveIdea\n            ConceiveIdea --> DesignApp : Idea Finalized\n            DesignApp --> DevelopApp : Design Approved\n            DevelopApp --> TestApp : Development Completed\n            TestApp --> LaunchApp : Testing Successful\n            LaunchApp --> [*] : App Launched\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A healthcare insurance enrollment process where a user applies for insurance, the application is reviewed, coverage options are chosen, and the user is enrolled.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ApplyForInsurance\n            ApplyForInsurance --> ReviewApplication : Application Submitted\n            ReviewApplication --> ChooseCoverage : Application Approved\n            ChooseCoverage --> EnrollUser : Coverage Selected\n            EnrollUser --> [*] : User Enrolled\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A customer feedback process where feedback is collected, analyzed, actions are taken, and improvements are implemented.",
+        "output": "\n        stateDiagram-v2\n            [*] --> CollectFeedback\n            CollectFeedback --> AnalyzeFeedback : Feedback Received\n            AnalyzeFeedback --> TakeAction : Analysis Completed\n            TakeAction --> ImplementImprovements : Action Taken\n            ImplementImprovements --> [*] : Improvements Implemented\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A hotel reservation cancellation process where a guest requests cancellation, the request is processed, fees are calculated, and the reservation is canceled.",
+        "output": "\n        stateDiagram-v2\n            [*] --> RequestCancellation\n            RequestCancellation --> ProcessRequest : Cancellation Requested\n            ProcessRequest --> CalculateFees : Request Reviewed\n            CalculateFees --> CancelReservation : Fees Confirmed\n            CancelReservation --> [*] : Reservation Canceled\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A utility service setup process where a user requests service, installation is scheduled, the service is set up, and billing begins.",
+        "output": "\n        stateDiagram-v2\n            [*] --> RequestService\n            RequestService --> ScheduleInstallation : Service Requested\n            ScheduleInstallation --> SetupService : Installation Scheduled\n            SetupService --> BeginBilling : Service Set Up\n            BeginBilling --> [*] : Billing Started\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A business merger process where two companies agree to merge, due diligence is conducted, legal approvals are obtained, and the merger is completed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> AgreeToMerge\n            AgreeToMerge --> ConductDueDiligence : Merger Announced\n            ConductDueDiligence --> ObtainApprovals : Due Diligence Done\n            ObtainApprovals --> CompleteMerger : Approvals Granted\n            CompleteMerger --> [*] : Merger Completed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A supply chain management system where orders are placed, items are produced, shipments are arranged, and products are delivered.",
+        "output": "\n        stateDiagram-v2\n            [*] --> PlaceOrder\n            PlaceOrder --> ProduceItems : Order Received\n            ProduceItems --> ArrangeShipment : Items Ready\n            ArrangeShipment --> DeliverProducts : Shipment Arranged\n            DeliverProducts --> [*] : Products Delivered\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An academic research process where a topic is selected, research is conducted, findings are analyzed, and a paper is published.",
+        "output": "\n        stateDiagram-v2\n            [*] --> SelectTopic\n            SelectTopic --> ConductResearch : Topic Finalized\n            ConductResearch --> AnalyzeFindings : Data Collected\n            AnalyzeFindings --> PublishPaper : Analysis Completed\n            PublishPaper --> [*] : Paper Published\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A warranty claim process where a customer files a claim, the claim is reviewed, repairs are authorized, and the product is repaired.",
+        "output": "\n        stateDiagram-v2\n            [*] --> FileClaim\n            FileClaim --> ReviewClaim : Claim Submitted\n            ReviewClaim --> AuthorizeRepairs : Claim Valid\n            AuthorizeRepairs --> RepairProduct : Repairs Authorized\n            RepairProduct --> [*] : Product Repaired\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A business expansion process where market research is conducted, a location is selected, operations are set up, and the business is launched.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ConductResearch\n            ConductResearch --> SelectLocation : Research Completed\n            SelectLocation --> SetupOperations : Location Chosen\n            SetupOperations --> LaunchBusiness : Operations Ready\n            LaunchBusiness --> [*] : Business Launched\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A non-profit fundraising event where an event is planned, sponsors are secured, the event is held, and funds are raised.",
+        "output": "\n        stateDiagram-v2\n            [*] --> PlanEvent\n            PlanEvent --> SecureSponsors : Event Planned\n            SecureSponsors --> HoldEvent : Sponsors Confirmed\n            HoldEvent --> RaiseFunds : Event Held\n            RaiseFunds --> [*] : Funds Raised\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A new employee training process where the training is scheduled, sessions are conducted, assessments are given, and the employee is certified.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ScheduleTraining\n            ScheduleTraining --> ConductSessions : Training Planned\n            ConductSessions --> GiveAssessments : Sessions Conducted\n            GiveAssessments --> CertifyEmployee : Assessments Passed\n            CertifyEmployee --> [*] : Employee Certified\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A customer loyalty program where customers enroll, points are earned, rewards are redeemed, and the program is renewed annually.",
+        "output": "\n        stateDiagram-v2\n            [*] --> EnrollProgram\n            EnrollProgram --> EarnPoints : Customer Enrolled\n            EarnPoints --> RedeemRewards : Points Accumulated\n            RedeemRewards --> RenewProgram : Rewards Redeemed\n            RenewProgram --> [*] : Program Renewed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A real estate transaction process where a property is listed, buyers are interested, offers are made, and the sale is completed.",
+        "output": "\n        stateDiagram-v2\n            [*] --> ListProperty\n            ListProperty --> InterestBuyers : Property Marketed\n            InterestBuyers --> MakeOffers : Buyers Interested\n            MakeOffers --> CompleteSale : Offer Accepted\n            CompleteSale --> [*] : Sale Closed\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: An environmental impact assessment process where the impact is studied, reports are compiled, public consultations are held, and approval is granted.",
+        "output": "\n        stateDiagram-v2\n            [*] --> StudyImpact\n            StudyImpact --> CompileReports : Research Done\n            CompileReports --> PublicConsultation : Reports Ready\n            PublicConsultation --> GrantApproval : Consultation Held\n            GrantApproval --> [*] : Approval Granted\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML state diagram for the following scenario: A charity donation process where a donor makes a donation, the donation is processed, a receipt is issued, and the funds are allocated.",
+        "output": "\n        stateDiagram-v2\n            [*] --> MakeDonation\n            MakeDonation --> ProcessDonation : Donation Received\n            ProcessDonation --> IssueReceipt : Donation Processed\n            IssueReceipt --> AllocateFunds : Receipt Issued\n            AllocateFunds --> [*] : Funds Allocated\n        "
+    }
+]

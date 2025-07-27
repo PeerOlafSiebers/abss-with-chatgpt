@@ -1,0 +1,94 @@
+model hotelSimulation {
+
+  // Define classes
+  class Tourist {
+    String name;
+    Flight bookedFlight;
+    Hotel checkedInHotel;
+    Tour attendedTour;
+
+    init() {
+        name = randomString(10);
+    }
+
+    action bookFlight() {
+        bookedFlight = new Flight();
+        println("Tourist " + name + " books flight " + bookedFlight.flightNumber);
+    }
+
+    action checkInHotel() {
+        checkedInHotel = new Hotel();
+        println("Tourist " + name + " checks in at hotel " + checkedInHotel.hotelName);
+    }
+
+    action attendTour() {
+        attendedTour = new Tour();
+        println("Tourist " + name + " attends tour " + attendedTour.tourName);
+    }
+
+    action returnHome() {
+        println("Tourist " + name + " returns home");
+        bookedFlight = null;
+        checkedInHotel = null;
+        attendedTour = null;
+    }
+  }
+
+  class Flight {
+    String flightNumber;
+
+    init() {
+        flightNumber = randomString(6);
+    }
+  }
+
+  class Hotel {
+    String hotelName;
+
+    init() {
+        hotelName = "Hotel-" + randomInt(100, 999);
+    }
+  }
+
+  class Tour {
+    String tourName;
+
+    init() {
+        tourName = "Tour-" + randomInt(100, 999);
+    }
+  }
+
+  // Define relationships
+  relation books between Tourist and Flight {
+    trigger bookFlight();
+    reverse cancels;
+  }
+
+  relation checksIn between Tourist and Hotel {
+    trigger checkInHotel();
+    reverse checksOut;
+  }
+
+  relation attends between Tourist and Tour {
+    trigger attendTour();
+    reverse leaves;
+  }
+
+  // Define schedule for tourist activities
+  schedule touristActivities {
+    every 3 ticks {
+      foreach Tourist t in Tourists {
+        if (t.bookedFlight == null) t.bookFlight();
+        else if (t.checkedInHotel == null && t.bookedFlight != null) t.checkInHotel();
+        else if (t.attendedTour == null && t.checkedInHotel != null) t.attendTour();
+        else if (t.attendedTour != null) t.returnHome();
+      }
+    }
+  }
+
+  // Initialize agents and other components
+  initialAgents {
+    Tourists: 100 of Tourist;
+  }
+
+}

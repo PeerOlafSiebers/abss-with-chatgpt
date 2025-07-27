@@ -1,0 +1,11 @@
+stateDiagram-v2
+[*] --> PotentialAdopter
+  note left of PotentialAdopter : Potential Adopter
+  PotentialAdopter --> ConsiderVRDevicePrices : Generate transition
+  ConsiderVRDevicePrices --> ReadVRDeviceReviews : Generate transition
+  ReadVRDeviceReviews --> PotentialAdopter
+  PotentialAdopter --> PurchaseVRDevice : Purchase transition
+    note left of PurchaseVRDevice : Purchase VR Device
+  PurchaseVRDevice --> PostPurchaseEvaluation : Generate transition
+    note left of PostPurchaseEvaluation : Evaluate Purchase Decision
+  PostPurchaseEvaluation --> [*]  

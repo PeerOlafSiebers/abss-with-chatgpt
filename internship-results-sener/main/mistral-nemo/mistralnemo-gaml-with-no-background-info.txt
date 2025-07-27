@@ -1,0 +1,48 @@
+// Define species
+species Prey {
+  // Initialize agent variables
+  initialPopulation <=> 100;
+  reproductionRate = 0.3;
+  deathRate = 0;
+
+  // Initialize agent actions
+  action reproduce { if (random(1, 100) <= reproductionRate * timeStep) createPrey(); }
+  action consume { foreach (neighbor Predator) { if (distanceTo(neighbor) <= consumptionDistance && neighbor.isAlive()) { deathRate = consumptionRate; break; } } }
+}
+
+species Predator {
+  initialPopulation = 50;
+  reproductionRate = 0.15;
+  deathRate = 0.2;
+  gestationPeriod = 5;
+
+  action reproduceWithDelay {
+    if (isReproducing) { isReproducing = false; createPredator(); }
+    if (random(1, 100) <= reproductionRate * timeStep && offspringCount >= gestationPeriod) {
+      isReproducing = true;
+      offspringCount = 0;
+    }
+    else if (isReproducing) { offspringCount++; }
+  }
+
+  action consumePrey {
+    foreach (neighbor Prey in radius(consumptionDistance)) {
+      if (neighbor.isAlive()) {
+        neighbor.decreaseLife(1);
+        increaseLife(1);
+        break;
+      }
+    }
+  }
+}
+
+// Define agent interactions
+interaction Prey consumes Predator {
+  consumptionRate = 0.5;
+  consumptionDistance = 2;
+}
+
+interaction Predator consumes Prey {
+  consumptionRate = 1;
+  consumptionDistance = 2;
+}

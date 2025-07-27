@@ -1,0 +1,70 @@
+sequenceDiagram
+    actor ThePredator
+    actor ThePrey
+    actor TheTourist
+    actor TheResearcher
+    participant TheMineralDeposit
+    participant TheCaveStructure
+
+    note over ThePredator: Use Case - Hunt Prey
+    loop HuntingCycle
+        ThePredator->>ThePrey: Hunt Prey (consider terrain & energy)
+        activate ThePrey
+        ThePrey-->>ThePredator: Evade Predator (camouflage & terrain)
+        deactivate ThePrey
+    end
+
+    note over ThePredator: Use Case - Reproduce
+    ThePredator->>ThePredator: Reproduce (mating & offspring survival)
+    activate ThePredator
+    deactivate ThePredator
+
+    note over ThePrey: Use Case - Forage for Food
+    ThePrey->>TheEcosystem: Forage for Food (food availability & competition)
+    activate TheEcosystem
+    TheEcosystem-->>ThePrey: Food Resources
+    deactivate TheEcosystem
+
+    note over TheTourist: Use Case - Navigate Trails
+    note over TheTourist: Use Case - Learn About Ecosystem
+    alt TouristEncounter
+        TheTourist->>TheCaveStructure: Navigate Trails
+        activate TheCaveStructure
+        TheCaveStructure-->>TheTourist: Map & Safety Guidance
+        deactivate TheCaveStructure
+
+        TheTourist->>TheEcosystem: Learn About Ecosystem
+        activate TheEcosystem
+        TheEcosystem-->>TheTourist: Information (flora, fauna, geology)
+        deactivate TheEcosystem
+    else NoTouristEncounter
+        note over TheResearcher: Use Case - Collect Population Data
+        TheResearcher->>TheMineralDeposit: Analyze (Collect Population Data)
+        activate TheMineralDeposit
+        TheMineralDeposit-->>TheResearcher: Nutrient/Population Data
+        deactivate TheMineralDeposit
+    end
+
+    note over TheResearcher: Use Case - Validate Model
+    par ParallelAnalysis
+        TheResearcher->>TheMineralDeposit: Collect Population Data
+        activate TheMineralDeposit
+        TheMineralDeposit-->>TheResearcher: Population Trends
+        deactivate TheMineralDeposit
+
+        TheResearcher->>TheCaveStructure: Validate Model
+        activate TheCaveStructure
+        TheCaveStructure-->>TheResearcher: Model vs Real Data
+        deactivate TheCaveStructure
+    end
+
+    par ParallelAnalysis
+        TheResearcher->>TheMineralDeposit: AnalyzeNutrientLevels
+        activate TheMineralDeposit
+        TheMineralDeposit-->>TheResearcher: NutrientReport
+        deactivate TheMineralDeposit
+        TheResearcher->>TheCaveStructure: AssessHabitatComplexity
+        activate TheCaveStructure
+        TheCaveStructure-->>TheResearcher: HabitatAssessment
+        deactivate TheCaveStructure
+    end

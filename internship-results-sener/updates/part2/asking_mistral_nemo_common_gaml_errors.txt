@@ -1,0 +1,28 @@
+ollama syntax errors
+
+missing semicolons
+
+using == for comparison (instead of =)
+
+defining "action x {...} action y {...}" as methods: "x() {...} y() {...}"
+
+including "attribute" keyword infront of species attributes
+
+not including datatype infront of attributes/variables
+
+incrementing like "eggCount += 1" instead of eggCount <- eggCount + 1
+
+multiplying/dividing like "predator.reproductionRate *= 0.5" or  instead of "predator.reproductionRate <- predator.reproductionRate * 0.5"
+
+calling "die()" instead of "do die;"
+
+for loops (for in range and for each)
+
+list types
+
+types of parameters in actions and reflexes
+
+experiment outputs
+
+experiment display plotting
+

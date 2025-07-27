@@ -1,0 +1,149 @@
+classDiagram
+    class Predator {
+        - energyLevel : float
+        - territorySize : float
+        - huntingFrequency : int
+        + hunt()
+        + reproduce()
+        + measureHuntingSuccessRate()
+    }
+
+    class Prey {
+        - energyLevel : float
+        - habitatPreference : string
+        - riskAversion : int
+        + forage()
+        + evadePredator()
+        + reproduce()
+        + measureForagingEfficiency()
+    }
+
+    class Tourist {
+        - environmentalImpactScore : float
+        - interestInLocalCulture : int
+        - noiseLevel : int
+        + navigateTrails()
+        + learnAboutEcosystem()
+        + produceNoise()
+    }
+
+    class Researcher {
+        - dataAnalysisRigor : float
+        - publicationFrequency : int
+        - fundingAllocated : float
+        + collectData()
+        + validateModel()
+        + analyzeEcosystemHealth()
+        + publishFindings()
+    }
+
+    class PredatorPack {
+        - predators : Predator[]
+        - groupSize : int
+        + coordinateHunt()
+        + measurePackSuccessRate()
+    }
+
+    class PreyHerd {
+        - preys : Prey[]
+        - herdSize : int
+        + coordinateMovement()
+        + measureHerdSafety()
+    }
+
+    class TouristGroup {
+        - tourists : Tourist[]
+        - groupSize : int
+        - aggregateNoiseLevel : int
+        + planRoute()
+        + calculateGroupImpact()
+    }
+
+    class ResearchTeam {
+        - researchers : Researcher[]
+        - teamSize : int
+        - totalFunding : float
+        + coordinateFieldwork()
+        + compileReports()
+    }
+
+    class MineralDeposit {
+        - nutrientLevel : float
+        - mineralDepletionRate : float
+        + provideNutrients()
+        + depleteMinerals()
+    }
+
+    class CaveStructure {
+        - habitatComplexity : float
+        - trailDensity : int
+        + provideHabitat()
+        + calculateTrailImpact()
+    }
+
+    class FungalBloom {
+        - biomass : float
+        + grow()
+        + beConsumed()
+    }
+
+    class ArtificialLab {
+        - predators : Predator[]
+        - preys : Prey[]
+        - tourists : Tourist[]
+        - researchers : Researcher[]
+        - predatorPacks : PredatorPack[]
+        - preyHerds : PreyHerd[]
+        - touristGroups : TouristGroup[]
+        - researchTeams : ResearchTeam[]
+        - caveStructures : CaveStructure[]
+        - mineralDeposits : MineralDeposit[]
+        - fungalBlooms : FungalBloom[]
+        - mineralDepletionRate : float
+        - trailDensity : int
+        - visitorNoiseLevel : int
+        - predatorPreyRatioHistory : float[]
+        - fungalResourceUtilizationRate : float[]
+        - ecosystemResilienceIndex : float
+        - criticalThresholds : float[]
+        + measurePredatorPreyRatio()
+        + measureFungalResourceUtilizationRate()
+        + measureEcosystemResilienceIndex()
+        + identifyCriticalThresholds()
+        + measureFungalBloomBiomass()
+        + measurePredatorForagingSuccessRate()
+        + measureSimulatedAestheticAppealScore()
+        + measureSimulatedTraditionalPracticeDisruptionIndex()
+        + verifyHypothesis1()
+        + verifyHypothesis2()
+        + simulateEcosystemResilience()
+    }
+
+    ArtificialLab *-- Predator
+    ArtificialLab *-- Prey
+    ArtificialLab *-- Tourist
+    ArtificialLab *-- Researcher
+    ArtificialLab *-- PredatorPack
+    ArtificialLab *-- PreyHerd
+    ArtificialLab *-- TouristGroup
+    ArtificialLab *-- ResearchTeam
+    ArtificialLab *-- CaveStructure
+    ArtificialLab *-- MineralDeposit
+    ArtificialLab *-- FungalBloom
+
+    PredatorPack o-- Predator
+    PreyHerd   o-- Prey
+    TouristGroup o-- Tourist
+    ResearchTeam o-- Researcher
+
+    Predator --> Prey : hunts
+    Prey --> FungalBloom : consumes
+    MineralDeposit *-- FungalBloom : nutrientSource
+    CaveStructure *-- MineralDeposit : contains
+    Tourist --> CaveStructure : explores
+    TouristGroup --> CaveStructure : traverses
+    Researcher --> Predator : studies
+    Researcher --> Prey : studies
+    Researcher --> FungalBloom : analyzes
+    Researcher --> MineralDeposit : analyzes
+    Researcher --> CaveStructure : analyzes

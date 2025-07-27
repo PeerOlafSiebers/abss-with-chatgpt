@@ -1,0 +1,9 @@
+Key Topic: The goal of this study is to generate IDEAS for applying the predator-prey cycle. The predator-prey model simulates the interactions between two species: predators and prey, within a grid-like environment where vegetation cells represent areas where vegetation grows. Prey feed on the vegetation which regenerates at each simulation step, while predators hunt and consume prey to gain energy. Both species follow specific behaviours: they move to neighbouring cells, consume available resources (prey or vegetation), and lose energy over time. If their energy drops too low, they die. However, if they maintain sufficient energy, they can reproduce, contributing to population dynamics.
+
+Key Research Design: Exploratory
+
+Key Domain: Ecological Modelling
+
+Key Specialisation: Ecological Dynamics
+
+Key Domain Related Role: Ecologist

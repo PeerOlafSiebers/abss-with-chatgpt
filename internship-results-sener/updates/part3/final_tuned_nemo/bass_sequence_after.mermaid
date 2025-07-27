@@ -1,0 +1,124 @@
+sequenceDiagram
+    actor ThePotentialAdopter
+    note over ThePotentialAdopter: Potential Adopter compares VR device prices
+    ThePotentialAdopter -->> TheVRDevice: Browse devices
+    activate ThePotentialAdopter
+    activate TheVRDevice
+    loop CompareLoop
+        TheVRDevice -->> ThePotentialAdopter: Display price and features
+        ThePotentialAdopter -->> TheVRDevice: Compare prices
+        deactivate TheVRDevice
+        alt CompareElse
+            ThePotentialAdopter -->> TheReview: Read reviews
+            activate TheReview 
+            TheReview -->> ThePotentialAdopter: Provide review rating and comment
+            deactivate TheReview
+            end 
+        end
+    note over ThePotentialAdopter: Potential Adopter reads VR device reviews
+    loop ReadLoop
+        ThePotentialAdopter -->> TheReview: Browse reviews
+        activate TheReview
+        TheReview -->> ThePotentialAdopter: Display review rating and comment
+        deactivate TheReview
+        opt SkipReview
+            ThePotentialAdopter -->> TheVRDevice: Make purchase decision without reading reviews
+            deactivate ThePotentialAdopter
+            activate TheVRDevice
+            deactivate TheVRDevice
+            end 
+        end 
+
+    actor TheEarlyAdopter
+    note over TheEarlyAdopter: Early Adopter explores new VR experiences
+    
+    TheEarlyAdopter -->> TheVRExperience: Browse experiences
+    activate TheVRExperience
+    loop ExperienceLoop
+        TheVRExperience -->> TheEarlyAdopter: Display experience details
+        activate TheEarlyAdopter
+        deactivate TheVRExperience
+        note over TheEarlyAdopter: Early Adopter shares VR experiences on social media
+        TheEarlyAdopter -->> TheSocialMediaPlatform: Share experience
+        activate TheSocialMediaPlatform
+        deactivate TheSocialMediaPlatform
+        alt ShareElse
+            TheEarlyAdopter -->> TheFriend: Invite friend to try the experience
+            activate TheFriend
+            deactivate TheFriend
+            deactivate TheEarlyAdopter
+            end 
+        end 
+
+    actor ThePriceSensitiveConsumer
+    note over ThePriceSensitiveConsumer: Price-Sensitive Consumer finds affordable VR bundles
+    ThePriceSensitiveConsumer -->> TheComplementaryGood: Browse goods
+    activate ThePriceSensitiveConsumer
+    activate TheComplementaryGood
+    loop BundleLoop
+        TheComplementaryGood -->> ThePriceSensitiveConsumer: Display product details and price
+        deactivate TheComplementaryGood
+        ThePriceSensitiveConsumer -->> TheVRDevice: Compare prices
+        activate TheVRDevice
+        deactivate TheVRDevice
+        alt CompareElse
+            ThePriceSensitiveConsumer -->> TheGamingConsole: Browse consoles
+            TheGamingConsole -->> ThePriceSensitiveConsumer: Display price comparison
+            activate TheGamingConsole
+            deactivate TheGamingConsole
+            end 
+        end 
+    deactivate ThePriceSensitiveConsumer
+
+    actor TheInfluencer
+    note over TheInfluencer: Influencer collaborates with VR manufacturers
+    TheInfluencer -->> TheVRManufacturer: Initiate collaboration
+    activate TheInfluencer
+    activate TheVRManufacturer
+    loop CollaborationLoop
+        TheVRManufacturer -->> TheInfluencer: Provide product information
+        deactivate TheVRManufacturer
+        TheInfluencer -->> TheReviewAndPromotionPlatform: Create promotional content
+        activate TheReviewAndPromotionPlatform
+        deactivate TheReviewAndPromotionPlatform
+        opt SkipPromotion
+            TheInfluencer -->> TheSocialMediaPlatform: Share review without creating content
+            activate TheSocialMediaPlatform
+            deactivate TheSocialMediaPlatform
+            end 
+        end 
+
+    note over TheInfluencer: Influencer reviews and promotes VR devices    
+    TheInfluencer -->> TheReviewAndPromotionPlatform: Create review
+    activate TheReviewAndPromotionPlatform
+    loop ReviewLoop
+        TheReviewAndPromotionPlatform -->> TheInfluencer: Display engagement metrics
+        deactivate TheReviewAndPromotionPlatform
+        TheInfluencer -->> TheSocialMediaPlatform: Share review
+        activate TheSocialMediaPlatform
+        deactivate TheSocialMediaPlatform
+        alt ShareElse
+            TheInfluencer -->> TheVRManufacturer: Provide feedback on device
+            activate TheVRManufacturer
+            deactivate TheVRManufacturer
+            end 
+        end 
+
+    note over TheInfluencer: Influencer influences adoptions
+    TheInfluencer -->> TheSocialMediaPlatform: Create targeted content
+    deactivate TheInfluencer
+    activate TheSocialMediaPlatform
+    loop InfluenceLoop
+        TheSocialMediaPlatform -->> ThePotentialAdopter: Display targeted content
+        activate ThePotentialAdopter
+        deactivate TheSocialMediaPlatform
+        ThePotentialAdopter -->> TheVRDevice: Make purchase decision based on influence
+        activate TheVRDevice
+        deactivate TheVRDevice
+        alt PurchaseElse
+            ThePotentialAdopter -->> ThePriceSensitiveConsumer: Compare prices before purchasing
+            activate ThePriceSensitiveConsumer
+            deactivate ThePriceSensitiveConsumer
+            deactivate ThePotentialAdopter
+        end 
+    end 

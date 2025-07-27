@@ -1,0 +1,366 @@
+[
+    {
+        "instruction": "A patient visits a hospital, interacts with a receptionist, consults a doctor, undergoes a test in the lab, receives a prescription, and gets discharged.",
+        "uml_class_diagram": "classDiagram\n    class Patient {\n        +String name\n        +visitHospital()\n        +consultDoctor()\n        +undergoTest()\n        +receivePrescription()\n        +getDischarged()\n    }\n\n    class Hospital {\n        +String name\n        +handlePatient()\n    }\n\n    class Receptionist {\n        +interactWithPatient()\n    }\n\n    class Doctor {\n        +consultWithPatient()\n        +prescribeMedication()\n    }\n\n    class Lab {\n        +conductTest()\n    }\n\n    class Prescription {\n        +String details\n    }\n\n    Patient --|> Hospital : visits\n    Patient --|> Receptionist : interacts\n    Patient --|> Doctor : consults\n    Patient --|> Lab : undergoes\n    Patient --> Prescription : receives"
+    },
+    {
+        "instruction": "A student registers for a course, attends classes, submits assignments, takes exams, and receives grades.",
+        "uml_class_diagram": "classDiagram\n    class Student {\n        +String name\n        +registerForCourse()\n        +attendClasses()\n        +submitAssignments()\n        +takeExams()\n        +receiveGrades()\n    }\n\n    class Course {\n        +String courseName\n    }\n\n    class Assignment {\n        +String details\n        +submit()\n    }\n\n    class Exam {\n        +String details\n        +take()\n    }\n\n    class Grade {\n        +String value\n    }\n\n    Student --> Course : registers\n    Student --> Assignment : submits\n    Student --> Exam : takes\n    Student --> Grade : receives"
+    },
+    {
+        "instruction": "A company processes an order, checks inventory, dispatches goods, issues an invoice, and updates the customer on the delivery status.",
+        "uml_class_diagram": "classDiagram\n    class Company {\n        +String name\n        +processOrder()\n        +checkInventory()\n        +dispatchGoods()\n        +issueInvoice()\n        +updateCustomer()\n    }\n\n    class Order {\n        +String details\n    }\n\n    class Inventory {\n        +checkStock()\n    }\n\n    class Goods {\n        +dispatch()\n    }\n\n    class Invoice {\n        +String details\n        +issue()\n    }\n\n    class Customer {\n        +String name\n        +receiveUpdate()\n    }\n\n    Company --> Order : processes\n    Company --> Inventory : checks\n    Company --> Goods : dispatches\n    Company --> Invoice : issues\n    Company --> Customer : updates"
+    },
+    {
+        "instruction": "A tourist books a flight, checks into a hotel, attends a tour, and returns home.",
+        "uml_class_diagram": "classDiagram\n    class Tourist {\n        +String name\n        +bookFlight()\n        +checkInHotel()\n        +attendTour()\n        +returnHome()\n    }\n\n    class Flight {\n        +String flightNumber\n    }\n\n    class Hotel {\n        +String hotelName\n    }\n\n    class Tour {\n        +String tourName\n    }\n\n    Tourist --> Flight : books\n    Tourist --> Hotel : checks in\n    Tourist --> Tour : attends"
+    },
+    {
+        "instruction": "A company conducts market research, gathers data, analyzes it, and presents the findings.",
+        "uml_class_diagram": "classDiagram\n    class Company {\n        +String name\n        +conductMarketResearch()\n        +gatherData()\n        +analyzeData()\n        +presentFindings()\n    }\n\n    class Data {\n        +String details\n    }\n\n    class Findings {\n        +String details\n    }\n\n    Company --> Data : gathers\n    Company --> Findings : presents"
+    },
+    {
+        "instruction": "A patient books an appointment, meets with a specialist, undergoes surgery, stays in recovery, and then gets discharged.",
+        "uml_class_diagram": "classDiagram\n    class Patient {\n        +String name\n        +bookAppointment()\n        +meetSpecialist()\n        +undergoSurgery()\n        +stayInRecovery()\n        +getDischarged()\n    }\n\n    class Appointment {\n        +String details\n    }\n\n    class Specialist {\n        +String name\n        +consultPatient()\n    }\n\n    class Surgery {\n        +String details\n    }\n\n    class Recovery {\n        +String details\n    }\n\n    Patient --> Appointment : books\n    Patient --> Specialist : meets\n    Patient --> Surgery : undergoes\n    Patient --> Recovery : stays"
+    },
+    {
+        "instruction": "A new employee joins a company, goes through orientation, gets assigned a project, completes tasks, and submits a final report.",
+        "uml_class_diagram": "classDiagram\n    class Employee {\n        +String name\n        +joinCompany()\n        +goThroughOrientation()\n        +getAssignedProject()\n        +completeTasks()\n        +submitFinalReport()\n    }\n\n    class Company {\n        +String name\n        +orientEmployee()\n        +assignProject()\n    }\n\n    class Project {\n        +String projectName\n    }\n\n    class Task {\n        +String details\n    }\n\n    class Report {\n        +String details\n    }\n\n    Employee --> Company : joins\n    Employee --> Project : assigned\n    Employee --> Task : completes\n    Employee --> Report : submits"
+    },
+    {
+        "instruction": "A bank customer applies for a loan, the bank processes the application, approves it, disburses funds, and the customer makes repayments.",
+        "uml_class_diagram": "classDiagram\n    class Customer {\n        +String name\n        +applyForLoan()\n        +makeRepayments()\n    }\n\n    class Bank {\n        +String name\n        +processApplication()\n        +approveLoan()\n        +disburseFunds()\n    }\n\n    class Loan {\n        +String details\n    }\n\n    class Application {\n        +String details\n    }\n\n    Bank --> Application : processes\n    Bank --> Loan : approves\n    Bank --> Customer : disburses funds\n    Customer --> Loan : repays"
+    },
+    {
+        "instruction": "A public health team tracks an outbreak, collects data, analyzes trends, and implements control measures.",
+        "uml_class_diagram": "classDiagram\n    class PublicHealthTeam {\n        +String name\n        +trackOutbreak()\n        +collectData()\n        +analyzeTrends()\n        +implementControlMeasures()\n    }\n\n    class Outbreak {\n        +String details\n    }\n\n    class Data {\n        +String details\n    }\n\n    class Trends {\n        +String details\n    }\n\n    class ControlMeasures {\n        +String details\n    }\n\n    PublicHealthTeam --> Outbreak : tracks\n    PublicHealthTeam --> Data : collects\n    PublicHealthTeam --> Trends : analyzes\n    PublicHealthTeam --> ControlMeasures : implements"
+    },
+    {
+        "instruction": "A car manufacturer designs a new model, tests prototypes, launches production, markets the car, and sells to customers.",
+        "uml_class_diagram": "classDiagram\n    class CarManufacturer {\n        +String name\n        +designModel()\n        +testPrototypes()\n        +launchProduction()\n        +marketCar()\n        +sellToCustomers()\n    }\n\n    class Model {\n        +String modelName\n    }\n\n    class Prototype {\n        +String details\n    }\n\n    class Production {\n        +String details\n    }\n\n    class Customer {\n        +String name\n    }\n\n    CarManufacturer --> Model : designs\n    CarManufacturer --> Prototype : tests\n    CarManufacturer --> Production : launches\n    CarManufacturer --> Customer : sells"
+    },
+    {
+        "instruction": "A disaster management team monitors weather conditions, issues warnings, coordinates evacuations, and provides relief to affected populations.",
+        "uml_class_diagram": "classDiagram\n    class DisasterManagementTeam {\n        +String name\n        +monitorWeather()\n        +issueWarnings()\n        +coordinateEvacuations()\n        +provideRelief()\n    }\n\n    class Weather {\n        +String details\n    }\n\n    class Warnings {\n        +String details\n    }\n\n    class Evacuation {\n        +String details\n    }\n\n    class Relief {\n        +String details\n    }\n\n    DisasterManagementTeam --> Weather : monitors\n    DisasterManagementTeam --> Warnings : issues\n    DisasterManagementTeam --> Evacuation : coordinates\n    DisasterManagementTeam --> Relief : provides"
+    },
+    {
+        "instruction": "A software company develops a new application, tests it, deploys it to production, and provides ongoing support.",
+        "uml_class_diagram": "classDiagram\n    class SoftwareCompany {\n        +String name\n        +developApplication()\n        +testApplication()\n        +deployToProduction()\n        +provideSupport()\n    }\n\n    class Application {\n        +String appName\n    }\n\n    class Production {\n        +String details\n    }\n\n    class Support {\n        +String details\n    }\n\n    SoftwareCompany --> Application : develops\n    SoftwareCompany --> Application : tests\n    SoftwareCompany --> Production : deploys\n    SoftwareCompany --> Support : provides"
+    },
+    {
+        "instruction": "An insurance company processes a claim, reviews documents, assesses damage, approves the claim, and disburses funds.",
+        "uml_class_diagram": "classDiagram\n    class InsuranceCompany {\n        +String name\n        +processClaim()\n        +reviewDocuments()\n        +assessDamage()\n        +approveClaim()\n        +disburseFunds()\n    }\n\n    class Claim {\n        +String details\n    }\n\n    class Document {\n        +String details\n    }\n\n    class Damage {\n        +String details\n    }\n\n    class Funds {\n        +String amount\n    }\n\n    InsuranceCompany --> Claim : processes\n    InsuranceCompany --> Document : reviews\n    InsuranceCompany --> Damage : assesses\n    InsuranceCompany --> Claim : approves\n    InsuranceCompany --> Funds : disburses"
+    },
+    {
+        "instruction": "A logistics company receives an order, picks and packs goods, ships them, and delivers to the customer.",
+        "uml_class_diagram": "classDiagram\n    class LogisticsCompany {\n        +String name\n        +receiveOrder()\n        +pickAndPackGoods()\n        +shipGoods()\n        +deliverToCustomer()\n    }\n\n    class Order {\n        +String details\n    }\n\n    class Goods {\n        +String details\n    }\n\n    class Customer {\n        +String name\n    }\n\n    LogisticsCompany --> Order : receives\n    LogisticsCompany --> Goods : picks and packs\n    LogisticsCompany --> Goods : ships\n    LogisticsCompany --> Customer : delivers"
+    },
+    {
+        "instruction": "A research team submits a grant proposal, gets approval, conducts research, publishes results, and presents findings at a conference.",
+        "uml_class_diagram": "classDiagram\n    class ResearchTeam {\n        +String name\n        +submitProposal()\n        +conductResearch()\n        +publishResults()\n        +presentFindings()\n    }\n\n    class Proposal {\n        +String details\n    }\n\n    class Research {\n        +String topic\n    }\n\n    class Results {\n        +String details\n    }\n\n    class Findings {\n        +String details\n    }\n\n    ResearchTeam --> Proposal : submits\n    ResearchTeam --> Research : conducts\n    ResearchTeam --> Results : publishes\n    ResearchTeam --> Findings : presents"
+    },
+    {
+        "instruction": "A university processes student applications, evaluates them, admits students, and conducts orientation.",
+        "uml_class_diagram": "classDiagram\n    class University {\n        +String name\n        +processApplications()\n        +evaluateApplications()\n        +admitStudents()\n        +conductOrientation()\n    }\n\n    class Application {\n        +String details\n    }\n\n    class Student {\n        +String name\n    }\n\n    class Orientation {\n        +String details\n    }\n\n    University --> Application : processes\n    University --> Application : evaluates\n    University --> Student : admits\n    University --> Orientation : conducts"
+    },
+    {
+        "instruction": "A pharmaceutical company develops a new drug, conducts clinical trials, gets regulatory approval, and launches the drug in the market.",
+        "uml_class_diagram": "classDiagram\n    class PharmaCompany {\n        +String name\n        +developDrug()\n        +conductClinicalTrials()\n        +getRegulatoryApproval()\n        +launchDrug()\n    }\n\n    class Drug {\n        +String name\n    }\n\n    class ClinicalTrials {\n        +String details\n    }\n\n    class Approval {\n        +String details\n    }\n\n    class Market {\n        +String details\n    }\n\n    PharmaCompany --> Drug : develops\n    PharmaCompany --> ClinicalTrials : conducts\n    PharmaCompany --> Approval : gets\n    PharmaCompany --> Market : launches"
+    },
+    {
+        "instruction": "A customer orders a product online, the e-commerce platform processes payment, the warehouse prepares the order, and a courier service delivers it.",
+        "uml_class_diagram": "classDiagram\n    class Customer {\n        +String name\n        +orderProduct()\n    }\n\n    class EcommercePlatform {\n        +String name\n        +processPayment()\n    }\n\n    class Warehouse {\n        +String name\n        +prepareOrder()\n    }\n\n    class CourierService {\n        +String name\n        +deliverOrder()\n    }\n\n    class Product {\n        +String details\n    }\n\n    Customer --> EcommercePlatform : orders\n    EcommercePlatform --> Warehouse : prepares\n    Warehouse --> CourierService : ships"
+    },
+    {
+        "instruction": "A project manager initiates a project, allocates resources, tracks progress, and delivers the final product to the client.",
+        "uml_class_diagram": "classDiagram\n    class ProjectManager {\n        +String name\n        +initiateProject()\n        +allocateResources()\n        +trackProgress()\n        +deliverFinalProduct()\n    }\n\n    class Project {\n        +String projectName\n    }\n\n    class Resources {\n        +String details\n    }\n\n    class Progress {\n        +String details\n    }\n\n    class Product {\n        +String details\n    }\n\n    class Client {\n        +String name\n    }\n\n    ProjectManager --> Project : initiates\n    ProjectManager --> Resources : allocates\n    ProjectManager --> Progress : tracks\n    ProjectManager --> Product : delivers\n    Product --> Client : received"
+    },
+    {
+        "instruction": "A city plans a new infrastructure project, conducts public consultations, secures funding, and begins construction.",
+        "uml_class_diagram": "classDiagram\n    class City {\n        +String name\n        +planProject()\n        +conductConsultations()\n        +secureFunding()\n        +beginConstruction()\n    }\n\n    class Project {\n        +String projectName\n    }\n\n    class Consultations {\n        +String details\n    }\n\n    class Funding {\n        +String amount\n    }\n\n    class Construction {\n        +String details\n    }\n\n    City --> Project : plans\n    City --> Consultations : conducts\n    City --> Funding : secures\n    City --> Construction : begins"
+    },
+    {
+        "instruction": "A retailer orders goods from a supplier, receives them, stocks inventory, and sells to customers.",
+        "uml_class_diagram": "classDiagram\n    class Retailer {\n        +String name\n        +orderGoods()\n        +receiveGoods()\n        +stockInventory()\n        +sellToCustomers()\n    }\n\n    class Supplier {\n        +String name\n    }\n\n    class Goods {\n        +String details\n    }\n\n    class Inventory {\n        +String details\n    }\n\n    class Customer {\n        +String name\n    }\n\n    Retailer --> Supplier : orders\n    Retailer --> Goods : receives\n    Retailer --> Inventory : stocks\n    Retailer --> Customer : sells"
+    },
+    {
+        "instruction": "A healthcare provider administers a vaccination program, records data, and reports to health authorities.",
+        "uml_class_diagram": "classDiagram\n    class HealthcareProvider {\n        +String name\n        +administerVaccination()\n        +recordData()\n        +reportToAuthorities()\n    }\n\n    class Vaccination {\n        +String details\n    }\n\n    class Data {\n        +String details\n    }\n\n    class Authorities {\n        +String name\n    }\n\n    HealthcareProvider --> Vaccination : administers\n    HealthcareProvider --> Data : records\n    HealthcareProvider --> Authorities : reports"
+    },
+    {
+        "instruction": "A customer visits a website, adds items to the cart, checks out, and receives order confirmation.",
+        "uml_class_diagram": "classDiagram\n    class Customer {\n        +String name\n        +visitWebsite()\n        +addItemToCart()\n        +checkout()\n        +receiveConfirmation()\n    }\n\n    class Website {\n        +String url\n    }\n\n    class Cart {\n        +List items\n        +addItem()\n    }\n\n    class Order {\n        +String details\n    }\n\n    Customer --> Website : visits\n    Customer --> Cart : adds items\n    Cart --> Order : checkout\n    Order --> Customer : confirmation"
+    },
+    {
+        "instruction": "A publishing house reviews a manuscript, edits it, designs the cover, prints the book, and distributes it.",
+        "uml_class_diagram": "classDiagram\n    class PublishingHouse {\n        +String name\n        +reviewManuscript()\n        +editManuscript()\n        +designCover()\n        +printBook()\n        +distributeBook()\n    }\n\n    class Manuscript {\n        +String title\n    }\n\n    class Cover {\n        +String design\n    }\n\n    class Book {\n        +String title\n    }\n\n    PublishingHouse --> Manuscript : reviews\n    PublishingHouse --> Manuscript : edits\n    PublishingHouse --> Cover : designs\n    PublishingHouse --> Book : prints\n    PublishingHouse --> Book : distributes"
+    },
+    {
+        "instruction": "A tech company launches a new product, conducts marketing campaigns, gathers customer feedback, and updates the product.",
+        "uml_class_diagram": "classDiagram\n    class TechCompany {\n        +String name\n        +launchProduct()\n        +conductMarketing()\n        +gatherFeedback()\n        +updateProduct()\n    }\n\n    class Product {\n        +String name\n    }\n\n    class Marketing {\n        +String campaignDetails\n    }\n\n    class Feedback {\n        +String details\n    }\n\n    TechCompany --> Product : launches\n    TechCompany --> Marketing : conducts\n    TechCompany --> Feedback : gathers\n    TechCompany --> Product : updates"
+    },
+    {
+        "instruction": "A government agency collects census data, analyzes it, and publishes reports for policy-making.",
+        "uml_class_diagram": "classDiagram\n    class GovernmentAgency {\n        +String name\n        +collectCensusData()\n        +analyzeData()\n        +publishReports()\n    }\n\n    class CensusData {\n        +String details\n    }\n\n    class Reports {\n        +String details\n    }\n\n    GovernmentAgency --> CensusData : collects\n    GovernmentAgency --> CensusData : analyzes\n    GovernmentAgency --> Reports : publishes"
+    },
+    {
+        "instruction": "A film production company creates a movie, distributes it to theaters, and streams it online.",
+        "uml_class_diagram": "classDiagram\n    class FilmProductionCompany {\n        +String name\n        +createMovie()\n        +distributeToTheaters()\n        +streamOnline()\n    }\n\n    class Movie {\n        +String title\n    }\n\n    class Theater {\n        +String name\n    }\n\n    class OnlinePlatform {\n        +String url\n    }\n\n    FilmProductionCompany --> Movie : creates\n    FilmProductionCompany --> Theater : distributes\n    FilmProductionCompany --> OnlinePlatform : streams"
+    },
+    {
+        "instruction": "A bank opens a new account, issues a debit card, and enables online banking for the customer.",
+        "uml_class_diagram": "classDiagram\n    class Bank {\n        +String name\n        +openAccount()\n        +issueDebitCard()\n        +enableOnlineBanking()\n    }\n\n    class Account {\n        +String accountNumber\n    }\n\n    class DebitCard {\n        +String cardNumber\n    }\n\n    class Customer {\n        +String name\n    }\n\n    Bank --> Account : opens\n    Bank --> DebitCard : issues\n    Bank --> Customer : enables online banking"
+    },
+    {
+        "instruction": "A travel agency books flights, reserves hotel rooms, and arranges local tours for a group of tourists.",
+        "uml_class_diagram": "classDiagram\n    class TravelAgency {\n        +String name\n        +bookFlights()\n        +reserveHotelRooms()\n        +arrangeLocalTours()\n    }\n\n    class Flight {\n        +String flightNumber\n    }\n\n    class HotelRoom {\n        +String roomNumber\n    }\n\n    class Tour {\n        +String tourName\n    }\n\n    TravelAgency --> Flight : books\n    TravelAgency --> HotelRoom : reserves\n    TravelAgency --> Tour : arranges"
+    },
+    {
+        "instruction": "A food delivery service receives an order, prepares the food, and delivers it to the customer.",
+        "uml_class_diagram": "classDiagram\n    class FoodDeliveryService {\n        +String name\n        +receiveOrder()\n        +prepareFood()\n        +deliverToCustomer()\n    }\n\n    class Order {\n        +String details\n    }\n\n    class Food {\n        +String dishName\n    }\n\n    class Customer {\n        +String name\n    }\n\n    FoodDeliveryService --> Order : receives\n    FoodDeliveryService --> Food : prepares\n    FoodDeliveryService --> Customer : delivers"
+    },
+    {
+        "instruction": "A university professor assigns a research project, students conduct research, submit reports, and receive grades.",
+        "uml_class_diagram": "classDiagram\n    class Professor {\n        +String name\n        +assignResearchProject()\n        +gradeReports()\n    }\n\n    class Student {\n        +String name\n        +conductResearch()\n        +submitReport()\n        +receiveGrade()\n    }\n\n    class ResearchProject {\n        +String title\n    }\n\n    class Report {\n        +String details\n    }\n\n    class Grade {\n        +String value\n    }\n\n    Professor --> ResearchProject : assigns\n    Student --> ResearchProject : conducts\n    Student --> Report : submits\n    Professor --> Grade : gives\n    Student --> Grade : receives"
+    },
+    {
+        "instruction": "A manufacturing plant receives raw materials, processes them, assembles products, and ships them to distributors.",
+        "uml_class_diagram": "classDiagram\n    class ManufacturingPlant {\n        +String name\n        +receiveMaterials()\n        +processMaterials()\n        +assembleProducts()\n        +shipToDistributors()\n    }\n\n    class RawMaterials {\n        +String type\n    }\n\n    class Product {\n        +String name\n    }\n\n    class Distributor {\n        +String name\n    }\n\n    ManufacturingPlant --> RawMaterials : receives\n    ManufacturingPlant --> Product : assembles\n    ManufacturingPlant --> Distributor : ships"
+    },
+    {
+        "instruction": "A political candidate runs a campaign, holds rallies, debates opponents, and wins the election.",
+        "uml_class_diagram": "classDiagram\n    class Candidate {\n        +String name\n        +runCampaign()\n        +holdRallies()\n        +debateOpponents()\n        +winElection()\n    }\n\n    class Campaign {\n        +String details\n    }\n\n    class Rally {\n        +String details\n    }\n\n    class Opponent {\n        +String name\n    }\n\n    class Election {\n        +String result\n    }\n\n    Candidate --> Campaign : runs\n    Candidate --> Rally : holds\n    Candidate --> Opponent : debates\n    Candidate --> Election : wins"
+    },
+    {
+        "instruction": "An online store manages product listings, processes customer orders, handles returns, and manages inventory.",
+        "uml_class_diagram": "classDiagram\n    class OnlineStore {\n        +String name\n        +manageProductListings()\n        +processOrders()\n        +handleReturns()\n        +manageInventory()\n    }\n\n    class Product {\n        +String name\n    }\n\n    class Order {\n        +String details\n    }\n\n    class Return {\n        +String details\n    }\n\n    class Inventory {\n        +String details\n    }\n\n    OnlineStore --> Product : manages\n    OnlineStore --> Order : processes\n    OnlineStore --> Return : handles\n    OnlineStore --> Inventory : manages"
+    },
+    {
+        "instruction": "A corporate event planner organizes a conference, books a venue, arranges speakers, and coordinates with vendors.",
+        "uml_class_diagram": "classDiagram\n    class EventPlanner {\n        +String name\n        +organizeConference()\n        +bookVenue()\n        +arrangeSpeakers()\n        +coordinateVendors()\n    }\n\n    class Conference {\n        +String title\n    }\n\n    class Venue {\n        +String name\n    }\n\n    class Speaker {\n        +String name\n    }\n\n    class Vendor {\n        +String name\n    }\n\n    EventPlanner --> Conference : organizes\n    EventPlanner --> Venue : books\n    EventPlanner --> Speaker : arranges\n    EventPlanner --> Vendor : coordinates"
+    },
+    {
+        "instruction": "A bank processes credit card applications, issues cards, and manages customer transactions.",
+        "uml_class_diagram": "classDiagram\n    class Bank {\n        +String name\n        +processApplications()\n        +issueCards()\n        +manageTransactions()\n    }\n\n    class CreditCard {\n        +String cardNumber\n    }\n\n    class Application {\n        +String details\n    }\n\n    class Transaction {\n        +String details\n    }\n\n    class Customer {\n        +String name\n    }\n\n    Bank --> Application : processes\n    Bank --> CreditCard : issues\n    Bank --> Transaction : manages"
+    },
+    {
+        "instruction": "A healthcare facility manages patient records, schedules appointments, conducts tests, and updates medical history.",
+        "uml_class_diagram": "classDiagram\n    class HealthcareFacility {\n        +String name\n        +manageRecords()\n        +scheduleAppointments()\n        +conductTests()\n        +updateMedicalHistory()\n    }\n\n    class PatientRecord {\n        +String details\n    }\n\n    class Appointment {\n        +String details\n    }\n\n    class Test {\n        +String details\n    }\n\n    class MedicalHistory {\n        +String details\n    }\n\n    HealthcareFacility --> PatientRecord : manages\n    HealthcareFacility --> Appointment : schedules\n    HealthcareFacility --> Test : conducts\n    HealthcareFacility --> MedicalHistory : updates"
+    },
+    {
+        "instruction": "A supply chain system orders raw materials, manufactures products, stores inventory, and ships to retailers.",
+        "uml_class_diagram": "classDiagram\n    class SupplyChainSystem {\n        +String name\n        +orderRawMaterials()\n        +manufactureProducts()\n        +storeInventory()\n        +shipToRetailers()\n    }\n\n    class RawMaterials {\n        +String type\n    }\n\n    class Product {\n        +String name\n    }\n\n    class Inventory {\n        +String details\n    }\n\n    class Retailer {\n        +String name\n    }\n\n    SupplyChainSystem --> RawMaterials : orders\n    SupplyChainSystem --> Product : manufactures\n    SupplyChainSystem --> Inventory : stores\n    SupplyChainSystem --> Retailer : ships"
+    },
+    {
+        "instruction": "An advertising agency develops a marketing campaign, creates content, and distributes it across various media channels.",
+        "uml_class_diagram": "classDiagram\n    class AdvertisingAgency {\n        +String name\n        +developMarketingCampaign()\n        +createContent()\n        +distributeContent()\n    }\n\n    class MarketingCampaign {\n        +String details\n    }\n\n    class Content {\n        +String details\n    }\n\n    class MediaChannel {\n        +String name\n    }\n\n    AdvertisingAgency --> MarketingCampaign : develops\n    AdvertisingAgency --> Content : creates\n    AdvertisingAgency --> MediaChannel : distributes"
+    },
+    {
+        "instruction": "A software team develops a feature, integrates it with the existing system, tests it, and deploys it to production.",
+        "uml_class_diagram": "classDiagram\n    class SoftwareTeam {\n        +String name\n        +developFeature()\n        +integrateWithSystem()\n        +testFeature()\n        +deployToProduction()\n    }\n\n    class Feature {\n        +String name\n    }\n\n    class System {\n        +String name\n    }\n\n    class Production {\n        +String details\n    }\n\n    SoftwareTeam --> Feature : develops\n    SoftwareTeam --> System : integrates\n    SoftwareTeam --> Feature : tests\n    SoftwareTeam --> Production : deploys"
+    },
+    {
+        "instruction": "A social media company launches a new feature, collects user feedback, and updates the feature based on feedback.",
+        "uml_class_diagram": "classDiagram\n    class SocialMediaCompany {\n        +String name\n        +launchFeature()\n        +collectUserFeedback()\n        +updateFeature()\n    }\n\n    class Feature {\n        +String name\n    }\n\n    class UserFeedback {\n        +String details\n    }\n\n    SocialMediaCompany --> Feature : launches\n    SocialMediaCompany --> UserFeedback : collects\n    SocialMediaCompany --> Feature : updates"
+    },
+    {
+        "instruction": "A pharmaceutical company conducts clinical trials, submits results to regulatory agencies, and gets approval for a new drug.",
+        "uml_class_diagram": "classDiagram\n    class PharmaCompany {\n        +String name\n        +conductClinicalTrials()\n        +submitResults()\n        +getApproval()\n    }\n\n    class ClinicalTrials {\n        +String details\n    }\n\n    class Results {\n        +String details\n    }\n\n    class RegulatoryAgency {\n        +String name\n    }\n\n    class Approval {\n        +String details\n    }\n\n    PharmaCompany --> ClinicalTrials : conducts\n    PharmaCompany --> Results : submits\n    PharmaCompany --> RegulatoryAgency : submits to\n    PharmaCompany --> Approval : receives"
+    },
+    {
+        "instruction": "A retail chain launches a new store, hires staff, stocks inventory, and opens for business.",
+        "uml_class_diagram": "classDiagram\n    class RetailChain {\n        +String name\n        +launchStore()\n        +hireStaff()\n        +stockInventory()\n        +openForBusiness()\n    }\n\n    class Store {\n        +String location\n    }\n\n    class Staff {\n        +String name\n    }\n\n    class Inventory {\n        +String details\n    }\n\n    RetailChain --> Store : launches\n    RetailChain --> Staff : hires\n    RetailChain --> Inventory : stocks"
+    },
+    {
+        "instruction": "An automotive company recalls a defective vehicle, repairs it, and returns it to the customer.",
+        "uml_class_diagram": "classDiagram\n    class AutomotiveCompany {\n        +String name\n        +recallVehicle()\n        +repairVehicle()\n        +returnVehicle()\n    }\n\n    class Vehicle {\n        +String vin\n    }\n\n    class Customer {\n        +String name\n    }\n\n    AutomotiveCompany --> Vehicle : recalls\n    AutomotiveCompany --> Vehicle : repairs\n    AutomotiveCompany --> Customer : returns"
+    },
+    {
+        "instruction": "A government agency issues a new regulation, businesses comply, and the agency monitors adherence.",
+        "uml_class_diagram": "classDiagram\n    class GovernmentAgency {\n        +String name\n        +issueRegulation()\n        +monitorCompliance()\n    }\n\n    class Regulation {\n        +String details\n    }\n\n    class Business {\n        +String name\n        +complyWithRegulation()\n    }\n\n    GovernmentAgency --> Regulation : issues\n    GovernmentAgency --> Business : monitors compliance"
+    },
+    {
+        "instruction": "A car rental service processes a booking, prepares the vehicle, and hands it over to the customer.",
+        "uml_class_diagram": "classDiagram\n    class CarRentalService {\n        +String name\n        +processBooking()\n        +prepareVehicle()\n        +handOverToCustomer()\n    }\n\n    class Booking {\n        +String details\n    }\n\n    class Vehicle {\n        +String vin\n    }\n\n    class Customer {\n        +String name\n    }\n\n    CarRentalService --> Booking : processes\n    CarRentalService --> Vehicle : prepares\n    CarRentalService --> Customer : hands over"
+    },
+    {
+        "instruction": "A social science researcher designs a study, collects data, analyzes results, and publishes a paper.",
+        "uml_class_diagram": "classDiagram\n    class Researcher {\n        +String name\n        +designStudy()\n        +collectData()\n        +analyzeResults()\n        +publishPaper()\n    }\n\n    class Study {\n        +String topic\n    }\n\n    class Data {\n        +String details\n    }\n\n    class Results {\n        +String details\n    }\n\n    class Paper {\n        +String title\n    }\n\n    Researcher --> Study : designs\n    Researcher --> Data : collects\n    Researcher --> Results : analyzes\n    Researcher --> Paper : publishes"
+    },
+    {
+        "instruction": "A medical team receives a patient in the emergency room, diagnoses the condition, treats the patient, and updates the medical record.",
+        "uml_class_diagram": "classDiagram\n    class MedicalTeam {\n        +String name\n        +receivePatient()\n        +diagnoseCondition()\n        +treatPatient()\n        +updateMedicalRecord()\n    }\n\n    class Patient {\n        +String name\n    }\n\n    class Condition {\n        +String diagnosis\n    }\n\n    class MedicalRecord {\n        +String details\n    }\n\n    MedicalTeam --> Patient : receives\n    MedicalTeam --> Condition : diagnoses\n    MedicalTeam --> Patient : treats\n    MedicalTeam --> MedicalRecord : updates"
+    },
+    {
+        "instruction": "A news agency covers an event, edits the footage, and broadcasts it on television.",
+        "uml_class_diagram": "classDiagram\n    class NewsAgency {\n        +String name\n        +coverEvent()\n        +editFootage()\n        +broadcastOnTV()\n    }\n\n    class Event {\n        +String details\n    }\n\n    class Footage {\n        +String details\n    }\n\n    class Television {\n        +String channel\n    }\n\n    NewsAgency --> Event : covers\n    NewsAgency --> Footage : edits\n    NewsAgency --> Television : broadcasts"
+    },
+    {
+        "instruction": "A restaurant takes an order, prepares the food, and serves it to the customer.",
+        "uml_class_diagram": "classDiagram\n    class Restaurant {\n        +String name\n        +takeOrder()\n        +prepareFood()\n        +serveToCustomer()\n    }\n\n    class Order {\n        +String details\n    }\n\n    class Food {\n        +String dishName\n    }\n\n    class Customer {\n        +String name\n    }\n\n    Restaurant --> Order : takes\n    Restaurant --> Food : prepares\n    Restaurant --> Customer : serves"
+    },
+    {
+        "instruction": "A hotel processes a booking, checks in the guest, provides services, and checks out the guest.",
+        "uml_class_diagram": "classDiagram\n    class Hotel {\n        +String name\n        +processBooking()\n        +checkInGuest()\n        +provideServices()\n        +checkOutGuest()\n    }\n\n    class Booking {\n        +String details\n    }\n\n    class Guest {\n        +String name\n    }\n\n    class Services {\n        +String details\n    }\n\n    Hotel --> Booking : processes\n    Hotel --> Guest : checks in\n    Hotel --> Services : provides\n    Hotel --> Guest : checks out"
+    },
+    {
+        "instruction": "An online learning platform registers a student, enrolls them in a course, delivers lessons, and assesses performance.",
+        "uml_class_diagram": "classDiagram\n    class OnlineLearningPlatform {\n        +String name\n        +registerStudent()\n        +enrollInCourse()\n        +deliverLessons()\n        +assessPerformance()\n    }\n\n    class Student {\n        +String name\n    }\n\n    class Course {\n        +String courseName\n    }\n\n    class Lesson {\n        +String title\n    }\n\n    class Performance {\n        +String grade\n    }\n\n    OnlineLearningPlatform --> Student : registers\n    OnlineLearningPlatform --> Course : enrolls\n    OnlineLearningPlatform --> Lesson : delivers\n    OnlineLearningPlatform --> Performance : assesses"
+    },
+    {
+        "instruction": "A construction company wins a contract, designs the building, constructs it, and hands it over to the client.",
+        "uml_class_diagram": "classDiagram\n    class ConstructionCompany {\n        +String name\n        +winContract()\n        +designBuilding()\n        +constructBuilding()\n        +handoverToClient()\n    }\n\n    class Contract {\n        +String details\n    }\n\n    class Building {\n        +String name\n    }\n\n    class Client {\n        +String name\n    }\n\n    ConstructionCompany --> Contract : wins\n    ConstructionCompany --> Building : designs\n    ConstructionCompany --> Building : constructs\n    ConstructionCompany --> Client : hands over"
+    },
+    {
+        "instruction": "A fashion designer creates a new collection, showcases it at a fashion show, and sells it to buyers.",
+        "uml_class_diagram": "classDiagram\n    class FashionDesigner {\n        +String name\n        +createCollection()\n        +showcaseAtFashionShow()\n        +sellToBuyers()\n    }\n\n    class Collection {\n        +String name\n    }\n\n    class FashionShow {\n        +String name\n    }\n\n    class Buyer {\n        +String name\n    }\n\n    FashionDesigner --> Collection : creates\n    FashionDesigner --> FashionShow : showcases\n    FashionDesigner --> Buyer : sells"
+    },
+    {
+        "instruction": "An educational institution hires a new teacher, assigns classes, and evaluates their performance.",
+        "uml_class_diagram": "classDiagram\n    class EducationalInstitution {\n        +String name\n        +hireTeacher()\n        +assignClasses()\n        +evaluatePerformance()\n    }\n\n    class Teacher {\n        +String name\n    }\n\n    class Class {\n        +String subject\n    }\n\n    class Performance {\n        +String grade\n    }\n\n    EducationalInstitution --> Teacher : hires\n    EducationalInstitution --> Class : assigns\n    EducationalInstitution --> Performance : evaluates"
+    },
+    {
+        "instruction": "A tech startup develops a mobile app, tests it, launches it on app stores, and gathers user feedback.",
+        "uml_class_diagram": "classDiagram\n    class TechStartup {\n        +String name\n        +developMobileApp()\n        +testApp()\n        +launchOnAppStores()\n        +gatherUserFeedback()\n    }\n\n    class MobileApp {\n        +String name\n    }\n\n    class AppStore {\n        +String name\n    }\n\n    class UserFeedback {\n        +String details\n    }\n\n    TechStartup --> MobileApp : develops\n    TechStartup --> MobileApp : tests\n    TechStartup --> AppStore : launches\n    TechStartup --> UserFeedback : gathers"
+    },
+    {
+        "instruction": "A courier company receives a package, sorts it, transports it, and delivers it to the recipient.",
+        "uml_class_diagram": "classDiagram\n    class CourierCompany {\n        +String name\n        +receivePackage()\n        +sortPackage()\n        +transportPackage()\n        +deliverToRecipient()\n    }\n\n    class Package {\n        +String trackingNumber\n    }\n\n    class Recipient {\n        +String name\n    }\n\n    CourierCompany --> Package : receives\n    CourierCompany --> Package : sorts\n    CourierCompany --> Package : transports\n    CourierCompany --> Recipient : delivers"
+    },
+    {
+        "instruction": "A telecommunication company installs a new internet connection, configures the router, and activates the service for the customer.",
+        "uml_class_diagram": "classDiagram\n    class TelecomCompany {\n        +String name\n        +installInternetConnection()\n        +configureRouter()\n        +activateService()\n    }\n\n    class InternetConnection {\n        +String connectionID\n    }\n\n    class Router {\n        +String model\n    }\n\n    class Customer {\n        +String name\n    }\n\n    TelecomCompany --> InternetConnection : installs\n    TelecomCompany --> Router : configures\n    TelecomCompany --> Customer : activates service"
+    },
+    {
+        "instruction": "An e-commerce platform launches a new product line, markets it, and manages customer orders.",
+        "uml_class_diagram": "classDiagram\n    class EcommercePlatform {\n        +String name\n        +launchProductLine()\n        +marketProduct()\n        +manageCustomerOrders()\n    }\n\n    class ProductLine {\n        +String name\n    }\n\n    class CustomerOrder {\n        +String details\n    }\n\n    EcommercePlatform --> ProductLine : launches\n    EcommercePlatform --> ProductLine : markets\n    EcommercePlatform --> CustomerOrder : manages"
+    },
+    {
+        "instruction": "An online bank processes a loan application, approves the loan, and disburses the funds.",
+        "uml_class_diagram": "classDiagram\n    class OnlineBank {\n        +String name\n        +processLoanApplication()\n        +approveLoan()\n        +disburseFunds()\n    }\n\n    class LoanApplication {\n        +String details\n    }\n\n    class Loan {\n        +String details\n    }\n\n    class Funds {\n        +String amount\n    }\n\n    OnlineBank --> LoanApplication : processes\n    OnlineBank --> Loan : approves\n    OnlineBank --> Funds : disburses"
+    },
+    {
+        "instruction": "A government department launches a public awareness campaign, distributes informational materials, and tracks its impact.",
+        "uml_class_diagram": "classDiagram\n    class GovernmentDepartment {\n        +String name\n        +launchCampaign()\n        +distributeMaterials()\n        +trackImpact()\n    }\n\n    class Campaign {\n        +String details\n    }\n\n    class Materials {\n        +String details\n    }\n\n    class Impact {\n        +String details\n    }\n\n    GovernmentDepartment --> Campaign : launches\n    GovernmentDepartment --> Materials : distributes\n    GovernmentDepartment --> Impact : tracks"
+    },
+    {
+        "instruction": "An airport handles flight arrivals, manages baggage, and facilitates passenger transfers.",
+        "uml_class_diagram": "classDiagram\n    class Airport {\n        +String name\n        +handleArrivals()\n        +manageBaggage()\n        +facilitateTransfers()\n    }\n\n    class Flight {\n        +String flightNumber\n    }\n\n    class Baggage {\n        +String tagNumber\n    }\n\n    class Passenger {\n        +String name\n    }\n\n    Airport --> Flight : handles\n    Airport --> Baggage : manages\n    Airport --> Passenger : facilitates"
+    },
+    {
+        "instruction": "A law firm takes on a new client, conducts legal research, files a lawsuit, and represents the client in court.",
+        "uml_class_diagram": "classDiagram\n    class LawFirm {\n        +String name\n        +takeOnClient()\n        +conductLegalResearch()\n        +fileLawsuit()\n        +representInCourt()\n    }\n\n    class Client {\n        +String name\n    }\n\n    class LegalResearch {\n        +String details\n    }\n\n    class Lawsuit {\n        +String caseNumber\n    }\n\n    class Court {\n        +String name\n    }\n\n    LawFirm --> Client : takes on\n    LawFirm --> LegalResearch : conducts\n    LawFirm --> Lawsuit : files\n    LawFirm --> Client : represents"
+    },
+    {
+        "instruction": "A recruitment agency sources candidates, conducts interviews, and places them in jobs.",
+        "uml_class_diagram": "classDiagram\n    class RecruitmentAgency {\n        +String name\n        +sourceCandidates()\n        +conductInterviews()\n        +placeInJobs()\n    }\n\n    class Candidate {\n        +String name\n    }\n\n    class Interview {\n        +String details\n    }\n\n    class Job {\n        +String title\n    }\n\n    RecruitmentAgency --> Candidate : sources\n    RecruitmentAgency --> Interview : conducts\n    RecruitmentAgency --> Job : places"
+    },
+    {
+        "instruction": "A hospital schedules a surgery, prepares the operating room, performs the surgery, and monitors post-operative recovery.",
+        "uml_class_diagram": "classDiagram\n    class Hospital {\n        +String name\n        +scheduleSurgery()\n        +prepareOperatingRoom()\n        +performSurgery()\n        +monitorRecovery()\n    }\n\n    class Surgery {\n        +String details\n    }\n\n    class OperatingRoom {\n        +String roomNumber\n    }\n\n    class Recovery {\n        +String details\n    }\n\n    Hospital --> Surgery : schedules\n    Hospital --> OperatingRoom : prepares\n    Hospital --> Surgery : performs\n    Hospital --> Recovery : monitors"
+    },
+    {
+        "instruction": "A charity organization launches a fundraising campaign, receives donations, and distributes aid to beneficiaries.",
+        "uml_class_diagram": "classDiagram\n    class CharityOrganization {\n        +String name\n        +launchFundraisingCampaign()\n        +receiveDonations()\n        +distributeAid()\n    }\n\n    class FundraisingCampaign {\n        +String details\n    }\n\n    class Donation {\n        +String amount\n    }\n\n    class Aid {\n        +String details\n    }\n\n    class Beneficiary {\n        +String name\n    }\n\n    CharityOrganization --> FundraisingCampaign : launches\n    CharityOrganization --> Donation : receives\n    CharityOrganization --> Aid : distributes"
+    },
+    {
+        "instruction": "An energy company sets up a new solar plant, connects it to the grid, and supplies electricity to consumers.",
+        "uml_class_diagram": "classDiagram\n    class EnergyCompany {\n        +String name\n        +setupSolarPlant()\n        +connectToGrid()\n        +supplyElectricity()\n    }\n\n    class SolarPlant {\n        +String location\n    }\n\n    class Grid {\n        +String name\n    }\n\n    class Consumer {\n        +String name\n    }\n\n    EnergyCompany --> SolarPlant : sets up\n    EnergyCompany --> Grid : connects\n    EnergyCompany --> Consumer : supplies"
+    },
+    {
+        "instruction": "A sports team recruits new players, conducts training sessions, and participates in a tournament.",
+        "uml_class_diagram": "classDiagram\n    class SportsTeam {\n        +String name\n        +recruitPlayers()\n        +conductTraining()\n        +participateInTournament()\n    }\n\n    class Player {\n        +String name\n    }\n\n    class TrainingSession {\n        +String details\n    }\n\n    class Tournament {\n        +String name\n    }\n\n    SportsTeam --> Player : recruits\n    SportsTeam --> TrainingSession : conducts\n    SportsTeam --> Tournament : participates"
+    },
+    {
+        "instruction": "A healthcare system manages patient admissions, provides treatment, and discharges patients.",
+        "uml_class_diagram": "classDiagram\n    class HealthcareSystem {\n        +String name\n        +manageAdmissions()\n        +provideTreatment()\n        +dischargePatient()\n    }\n\n    class Patient {\n        +String name\n    }\n\n    class Admission {\n        +String details\n    }\n\n    class Treatment {\n        +String details\n    }\n\n    HealthcareSystem --> Admission : manages\n    HealthcareSystem --> Treatment : provides\n    HealthcareSystem --> Patient : discharges"
+    },
+    {
+        "instruction": "A music label signs a new artist, records an album, and releases it on streaming platforms.",
+        "uml_class_diagram": "classDiagram\n    class MusicLabel {\n        +String name\n        +signArtist()\n        +recordAlbum()\n        +releaseOnStreaming()\n    }\n\n    class Artist {\n        +String name\n    }\n\n    class Album {\n        +String title\n    }\n\n    class StreamingPlatform {\n        +String name\n    }\n\n    MusicLabel --> Artist : signs\n    MusicLabel --> Album : records\n    MusicLabel --> StreamingPlatform : releases"
+    },
+    {
+        "instruction": "A financial institution offers investment advice, manages portfolios, and reports on performance to clients.",
+        "uml_class_diagram": "classDiagram\n    class FinancialInstitution {\n        +String name\n        +offerInvestmentAdvice()\n        +managePortfolio()\n        +reportPerformance()\n    }\n\n    class Portfolio {\n        +String details\n    }\n\n    class Performance {\n        +String details\n    }\n\n    class Client {\n        +String name\n    }\n\n    FinancialInstitution --> Portfolio : manages\n    FinancialInstitution --> Performance : reports"
+    },
+    {
+        "instruction": "A supermarket restocks shelves, manages checkout, and processes payments for customers.",
+        "uml_class_diagram": "classDiagram\n    class Supermarket {\n        +String name\n        +restockShelves()\n        +manageCheckout()\n        +processPayments()\n    }\n\n    class Shelf {\n        +String id\n    }\n\n    class Checkout {\n        +String id\n    }\n\n    class Payment {\n        +String amount\n    }\n\n    class Customer {\n        +String name\n    }\n\n    Supermarket --> Shelf : restocks\n    Supermarket --> Checkout : manages\n    Supermarket --> Payment : processes"
+    },
+    {
+        "instruction": "A gaming company develops a new game, tests it, launches it, and supports players with updates.",
+        "uml_class_diagram": "classDiagram\n    class GamingCompany {\n        +String name\n        +developGame()\n        +testGame()\n        +launchGame()\n        +supportPlayers()\n    }\n\n    class Game {\n        +String title\n    }\n\n    class Player {\n        +String name\n    }\n\n    class Update {\n        +String details\n    }\n\n    GamingCompany --> Game : develops\n    GamingCompany --> Game : tests\n    GamingCompany --> Game : launches\n    GamingCompany --> Player : supports"
+    },
+    {
+        "instruction": "A ride-sharing app connects drivers with passengers, tracks the ride, and processes payments.",
+        "uml_class_diagram": "classDiagram\n    class RideSharingApp {\n        +String name\n        +connectDrivers()\n        +trackRide()\n        +processPayments()\n    }\n\n    class Driver {\n        +String name\n    }\n\n    class Passenger {\n        +String name\n    }\n\n    class Ride {\n        +String details\n    }\n\n    class Payment {\n        +String amount\n    }\n\n    RideSharingApp --> Driver : connects\n    RideSharingApp --> Passenger : connects\n    RideSharingApp --> Ride : tracks\n    RideSharingApp --> Payment : processes"
+    },
+    {
+        "instruction": "A cybersecurity firm detects a threat, analyzes it, and deploys countermeasures to protect client data.",
+        "uml_class_diagram": "classDiagram\n    class CybersecurityFirm {\n        +String name\n        +detectThreat()\n        +analyzeThreat()\n        +deployCountermeasures()\n    }\n\n    class Threat {\n        +String details\n    }\n\n    class Countermeasures {\n        +String details\n    }\n\n    class Client {\n        +String name\n    }\n\n    CybersecurityFirm --> Threat : detects\n    CybersecurityFirm --> Threat : analyzes\n    CybersecurityFirm --> Countermeasures : deploys"
+    },
+    {
+        "instruction": "A telecom company rolls out a 5G network, upgrades infrastructure, and provides services to customers.",
+        "uml_class_diagram": "classDiagram\n    class TelecomCompany {\n        +String name\n        +rollout5GNetwork()\n        +upgradeInfrastructure()\n        +provideServices()\n    }\n\n    class Network {\n        +String details\n    }\n\n    class Infrastructure {\n        +String details\n    }\n\n    class Customer {\n        +String name\n    }\n\n    TelecomCompany --> Network : rolls out\n    TelecomCompany --> Infrastructure : upgrades\n    TelecomCompany --> Customer : provides"
+    },
+    {
+        "instruction": "A robotics company designs a new robot, prototypes it, conducts testing, and begins mass production.",
+        "uml_class_diagram": "classDiagram\n    class RoboticsCompany {\n        +String name\n        +designRobot()\n        +prototypeRobot()\n        +conductTesting()\n        +beginProduction()\n    }\n\n    class Robot {\n        +String model\n    }\n\n    class Prototype {\n        +String details\n    }\n\n    class Testing {\n        +String details\n    }\n\n    class Production {\n        +String details\n    }\n\n    RoboticsCompany --> Robot : designs\n    RoboticsCompany --> Prototype : creates\n    RoboticsCompany --> Testing : conducts\n    RoboticsCompany --> Production : begins"
+    },
+    {
+        "instruction": "A cosmetics brand develops a new product, tests it for safety, and markets it globally.",
+        "uml_class_diagram": "classDiagram\n    class CosmeticsBrand {\n        +String name\n        +developProduct()\n        +testForSafety()\n        +marketGlobally()\n    }\n\n    class Product {\n        +String name\n    }\n\n    class SafetyTest {\n        +String details\n    }\n\n    class Market {\n        +String region\n    }\n\n    CosmeticsBrand --> Product : develops\n    CosmeticsBrand --> SafetyTest : tests\n    CosmeticsBrand --> Market : markets"
+    },
+    {
+        "instruction": "An automotive service center schedules a vehicle for maintenance, performs the service, and returns the vehicle to the customer.",
+        "uml_class_diagram": "classDiagram\n    class ServiceCenter {\n        +String name\n        +scheduleMaintenance()\n        +performService()\n        +returnVehicle()\n    }\n\n    class Vehicle {\n        +String vin\n    }\n\n    class Maintenance {\n        +String details\n    }\n\n    class Customer {\n        +String name\n    }\n\n    ServiceCenter --> Vehicle : schedules\n    ServiceCenter --> Maintenance : performs\n    ServiceCenter --> Customer : returns"
+    },
+    {
+        "instruction": "A city council proposes a new zoning law, holds public hearings, and implements the law.",
+        "uml_class_diagram": "classDiagram\n    class CityCouncil {\n        +String name\n        +proposeZoningLaw()\n        +holdPublicHearings()\n        +implementLaw()\n    }\n\n    class ZoningLaw {\n        +String details\n    }\n\n    class PublicHearing {\n        +String details\n    }\n\n    CityCouncil --> ZoningLaw : proposes\n    CityCouncil --> PublicHearing : holds\n    CityCouncil --> ZoningLaw : implements"
+    },
+    {
+        "instruction": "A university manages applications for a PhD program, reviews them, and admits students.",
+        "uml_class_diagram": "classDiagram\n    class University {\n        +String name\n        +manageApplications()\n        +reviewApplications()\n        +admitStudents()\n    }\n\n    class PhDProgram {\n        +String name\n    }\n\n    class Application {\n        +String details\n    }\n\n    class Student {\n        +String name\n    }\n\n    University --> PhDProgram : manages\n    University --> Application : reviews\n    University --> Student : admits"
+    },
+    {
+        "instruction": "A postal service processes incoming mail, sorts it, and delivers it to recipients.",
+        "uml_class_diagram": "classDiagram\n    class PostalService {\n        +String name\n        +processMail()\n        +sortMail()\n        +deliverMail()\n    }\n\n    class Mail {\n        +String details\n    }\n\n    class Recipient {\n        +String name\n    }\n\n    PostalService --> Mail : processes\n    PostalService --> Mail : sorts\n    PostalService --> Recipient : delivers"
+    },
+    {
+        "instruction": "A luxury car brand customizes a vehicle, assembles it, and delivers it to the customer.",
+        "uml_class_diagram": "classDiagram\n    class LuxuryCarBrand {\n        +String name\n        +customizeVehicle()\n        +assembleVehicle()\n        +deliverToCustomer()\n    }\n\n    class Vehicle {\n        +String vin\n    }\n\n    class Customer {\n        +String name\n    }\n\n    LuxuryCarBrand --> Vehicle : customizes\n    LuxuryCarBrand --> Vehicle : assembles\n    LuxuryCarBrand --> Customer : delivers"
+    },
+    {
+        "instruction": "A technology firm develops an AI model, trains it on data, and deploys it for business use.",
+        "uml_class_diagram": "classDiagram\n    class TechnologyFirm {\n        +String name\n        +developAIModel()\n        +trainModel()\n        +deployModel()\n    }\n\n    class AIModel {\n        +String name\n    }\n\n    class Data {\n        +String details\n    }\n\n    class BusinessUse {\n        +String details\n    }\n\n    TechnologyFirm --> AIModel : develops\n    TechnologyFirm --> Data : trains\n    TechnologyFirm --> BusinessUse : deploys"
+    },
+    {
+        "instruction": "A logistics company optimizes routes, loads cargo, and delivers shipments on schedule.",
+        "uml_class_diagram": "classDiagram\n    class LogisticsCompany {\n        +String name\n        +optimizeRoutes()\n        +loadCargo()\n        +deliverShipments()\n    }\n\n    class Route {\n        +String details\n    }\n\n    class Cargo {\n        +String description\n    }\n\n    class Shipment {\n        +String details\n    }\n\n    LogisticsCompany --> Route : optimizes\n    LogisticsCompany --> Cargo : loads\n    LogisticsCompany --> Shipment : delivers"
+    },
+    {
+        "instruction": "A non-profit organization organizes a charity auction, receives bids, and awards items to the highest bidders.",
+        "uml_class_diagram": "classDiagram\n    class NonProfitOrganization {\n        +String name\n        +organizeAuction()\n        +receiveBids()\n        +awardItems()\n    }\n\n    class CharityAuction {\n        +String details\n    }\n\n    class Bid {\n        +String amount\n    }\n\n    class Item {\n        +String name\n    }\n\n    class Bidder {\n        +String name\n    }\n\n    NonProfitOrganization --> CharityAuction : organizes\n    NonProfitOrganization --> Bid : receives\n    NonProfitOrganization --> Item : awards\n    Item --> Bidder : highest"
+    },
+    {
+        "instruction": "A real estate developer acquires land, designs a housing project, builds homes, and sells them to buyers.",
+        "uml_class_diagram": "classDiagram\n    class RealEstateDeveloper {\n        +String name\n        +acquireLand()\n        +designHousingProject()\n        +buildHomes()\n        +sellToBuyers()\n    }\n\n    class Land {\n        +String location\n    }\n\n    class HousingProject {\n        +String name\n    }\n\n    class Home {\n        +String address\n    }\n\n    class Buyer {\n        +String name\n    }\n\n    RealEstateDeveloper --> Land : acquires\n    RealEstateDeveloper --> HousingProject : designs\n    RealEstateDeveloper --> Home : builds\n    RealEstateDeveloper --> Buyer : sells"
+    },
+    {
+        "instruction": "A government conducts a national census, collects data, and publishes population statistics.",
+        "uml_class_diagram": "classDiagram\n    class Government {\n        +String name\n        +conductCensus()\n        +collectData()\n        +publishStatistics()\n    }\n\n    class Census {\n        +String details\n    }\n\n    class Data {\n        +String details\n    }\n\n    class PopulationStatistics {\n        +String details\n    }\n\n    Government --> Census : conducts\n    Government --> Data : collects\n    Government --> PopulationStatistics : publishes"
+    },
+    {
+        "instruction": "A cloud service provider provisions servers, deploys applications, and monitors performance for clients.",
+        "uml_class_diagram": "classDiagram\n    class CloudServiceProvider {\n        +String name\n        +provisionServers()\n        +deployApplications()\n        +monitorPerformance()\n    }\n\n    class Server {\n        +String id\n    }\n\n    class Application {\n        +String name\n    }\n\n    class Performance {\n        +String details\n    }\n\n    class Client {\n        +String name\n    }\n\n    CloudServiceProvider --> Server : provisions\n    CloudServiceProvider --> Application : deploys\n    CloudServiceProvider --> Performance : monitors"
+    },
+    {
+        "instruction": "An airline manages flight bookings, processes check-in, and handles baggage for passengers.",
+        "uml_class_diagram": "classDiagram\n    class Airline {\n        +String name\n        +manageBookings()\n        +processCheckin()\n        +handleBaggage()\n    }\n\n    class Booking {\n        +String details\n    }\n\n    class Checkin {\n        +String details\n    }\n\n    class Baggage {\n        +String tag\n    }\n\n    class Passenger {\n        +String name\n    }\n\n    Airline --> Booking : manages\n    Airline --> Checkin : processes\n    Airline --> Baggage : handles"
+    },
+    {
+        "instruction": "A government agency monitors air quality, analyzes data, and enforces environmental regulations.",
+        "uml_class_diagram": "classDiagram\n    class GovernmentAgency {\n        +String name\n        +monitorAirQuality()\n        +analyzeData()\n        +enforceRegulations()\n    }\n\n    class AirQuality {\n        +String details\n    }\n\n    class Data {\n        +String details\n    }\n\n    class EnvironmentalRegulations {\n        +String details\n    }\n\n    GovernmentAgency --> AirQuality : monitors\n    GovernmentAgency --> Data : analyzes\n    GovernmentAgency --> EnvironmentalRegulations : enforces"
+    }
+]

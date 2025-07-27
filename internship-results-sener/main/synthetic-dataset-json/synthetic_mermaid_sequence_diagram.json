@@ -1,0 +1,366 @@
+[
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A patient visits a hospital, interacts with a receptionist, consults a doctor, undergoes a test in the lab, receives a prescription, and gets discharged.",
+        "output": "\n        sequenceDiagram\n            participant Patient\n            participant Receptionist\n            participant Doctor\n            participant Lab\n            participant Pharmacy\n\n            Patient->>Receptionist: Registers\n            Receptionist->>Doctor: Schedules appointment\n            Doctor->>Patient: Consults\n            Doctor->>Lab: Orders test\n            Lab->>Doctor: Sends test results\n            Doctor->>Pharmacy: Prescribes medication\n            Pharmacy->>Patient: Dispenses medication\n            Doctor->>Patient: Discharge\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A student registers for a course, attends classes, submits assignments, takes exams, and receives grades.",
+        "output": "\n        sequenceDiagram\n            participant Student\n            participant Registrar\n            participant Instructor\n            participant ExamSystem\n            participant GradingSystem\n\n            Student->>Registrar: Registers for course\n            Registrar->>Instructor: Enrolls student\n            Student->>Instructor: Attends classes\n            Student->>Instructor: Submits assignments\n            Instructor->>ExamSystem: Schedules exams\n            Student->>ExamSystem: Takes exams\n            ExamSystem->>Instructor: Sends exam results\n            Instructor->>GradingSystem: Submits final grades\n            GradingSystem->>Student: Receives grades\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A company processes an order, checks inventory, dispatches goods, issues an invoice, and updates the customer on the delivery status.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant Sales\n            participant Inventory\n            participant Dispatch\n            participant Billing\n            participant Delivery\n\n            Customer->>Sales: Places order\n            Sales->>Inventory: Checks availability\n            Inventory-->>Sales: Confirms stock\n            Sales->>Dispatch: Requests dispatch\n            Dispatch->>Billing: Notifies dispatch\n            Billing->>Customer: Issues invoice\n            Dispatch->>Delivery: Ships goods\n            Delivery->>Customer: Updates delivery status\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A tourist books a flight, checks into a hotel, attends a tour, and returns home.",
+        "output": "\n        sequenceDiagram\n            participant Tourist\n            participant Airline\n            participant Hotel\n            participant TourOperator\n\n            Tourist->>Airline: Books flight\n            Airline->>Tourist: Sends ticket\n            Tourist->>Hotel: Checks in\n            Tourist->>TourOperator: Attends tour\n            TourOperator->>Tourist: Provides tour service\n            Tourist->>Hotel: Checks out\n            Tourist->>Airline: Takes return flight\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A company conducts a market research, gathers data, analyzes it, and presents the findings.",
+        "output": "\n        sequenceDiagram\n            participant Company\n            participant ResearchTeam\n            participant DataAnalyst\n            participant PresentationTeam\n\n            Company->>ResearchTeam: Commissions market research\n            ResearchTeam->>DataAnalyst: Gathers data\n            DataAnalyst->>ResearchTeam: Analyzes data\n            ResearchTeam->>PresentationTeam: Prepares report\n            PresentationTeam->>Company: Presents findings\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A patient books an appointment, meets with a specialist, undergoes surgery, stays in recovery, and then gets discharged.",
+        "output": "\n        sequenceDiagram\n            participant Patient\n            participant Reception\n            participant Specialist\n            participant SurgeryTeam\n            participant Recovery\n            participant Billing\n\n            Patient->>Reception: Books appointment\n            Reception->>Specialist: Schedules consultation\n            Patient->>Specialist: Consults specialist\n            Specialist->>SurgeryTeam: Orders surgery\n            SurgeryTeam->>Recovery: Transfers patient post-surgery\n            Recovery->>Patient: Monitors recovery\n            Recovery->>Billing: Sends discharge notice\n            Billing->>Patient: Processes payment\n            Billing->>Patient: Discharges patient\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A new employee joins a company, goes through orientation, gets assigned a project, completes tasks, and submits a final report.",
+        "output": "\n        sequenceDiagram\n            participant Employee\n            participant HR\n            participant IT\n            participant Manager\n            participant ProjectTeam\n\n            Employee->>HR: Completes paperwork\n            HR->>IT: Requests system access\n            IT->>Employee: Provides access\n            HR->>Manager: Notifies of new hire\n            Manager->>ProjectTeam: Assigns project\n            Employee->>ProjectTeam: Starts tasks\n            ProjectTeam->>Manager: Monitors progress\n            Employee->>Manager: Submits final report\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A bank customer applies for a loan, the bank processes the application, approves it, disburses funds, and the customer makes repayments.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant Bank\n            participant LoanOfficer\n            participant Underwriting\n            participant Disbursement\n            participant Repayment\n\n            Customer->>Bank: Applies for loan\n            Bank->>LoanOfficer: Reviews application\n            LoanOfficer->>Underwriting: Conducts risk assessment\n            Underwriting->>LoanOfficer: Approves loan\n            LoanOfficer->>Disbursement: Initiates disbursement\n            Disbursement->>Customer: Transfers funds\n            Repayment->>Customer: Sets up repayment schedule\n            Customer->>Repayment: Makes payments\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A public health team tracks an outbreak, collects data, analyzes trends, and implements control measures.",
+        "output": "\n        sequenceDiagram\n            participant PublicHealthTeam\n            participant FieldAgents\n            participant DataAnalyst\n            participant Epidemiologist\n            participant ResponseTeam\n\n            PublicHealthTeam->>FieldAgents: Deploys to affected area\n            FieldAgents->>DataAnalyst: Collects data\n            DataAnalyst->>Epidemiologist: Analyzes trends\n            Epidemiologist->>PublicHealthTeam: Recommends measures\n            PublicHealthTeam->>ResponseTeam: Implements control measures\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A car manufacturer designs a new model, tests prototypes, launches production, markets the car, and sells to customers.",
+        "output": "\n        sequenceDiagram\n            participant DesignTeam\n            participant TestingTeam\n            participant Production\n            participant Marketing\n            participant Sales\n            participant Customer\n\n            DesignTeam->>TestingTeam: Submits prototypes\n            TestingTeam->>DesignTeam: Sends feedback\n            DesignTeam->>Production: Finalizes design\n            Production->>Marketing: Begins production\n            Marketing->>Sales: Launches campaign\n            Sales->>Customer: Sells cars\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A disaster management team monitors weather conditions, issues warnings, coordinates evacuations, and provides relief to affected populations.",
+        "output": "\n        sequenceDiagram\n            participant MonitoringTeam\n            participant WeatherService\n            participant EmergencyServices\n            participant EvacuationTeam\n            participant ReliefTeam\n\n            MonitoringTeam->>WeatherService: Receives weather data\n            WeatherService->>MonitoringTeam: Issues alerts\n            MonitoringTeam->>EmergencyServices: Coordinates response\n            EmergencyServices->>EvacuationTeam: Organizes evacuations\n            ReliefTeam->>EmergencyServices: Provides relief\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A software company develops a new application, tests it, deploys it to production, and provides ongoing support.",
+        "output": "\n        sequenceDiagram\n            participant DevelopmentTeam\n            participant TestingTeam\n            participant Operations\n            participant SupportTeam\n            participant Customer\n\n            DevelopmentTeam->>TestingTeam: Delivers software build\n            TestingTeam->>DevelopmentTeam: Reports bugs\n            DevelopmentTeam->>TestingTeam: Fixes bugs\n            TestingTeam->>Operations: Approves release\n            Operations->>Customer: Deploys application\n            Customer->>SupportTeam: Reports issues\n            SupportTeam->>DevelopmentTeam: Escalates issues\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: An insurance company processes a claim, reviews documents, assesses damage, approves the claim, and disburses funds.",
+        "output": "\n        sequenceDiagram\n            participant Policyholder\n            participant ClaimsDepartment\n            participant DocumentReview\n            participant AssessmentTeam\n            participant Approvals\n            participant Disbursement\n\n            Policyholder->>ClaimsDepartment: Submits claim\n            ClaimsDepartment->>DocumentReview: Reviews documents\n            DocumentReview->>AssessmentTeam: Assesses damage\n            AssessmentTeam->>Approvals: Recommends approval\n            Approvals->>Disbursement: Approves claim\n            Disbursement->>Policyholder: Disburses funds\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A logistics company receives an order, picks and packs goods, ships them, and delivers to the customer.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant OrderProcessing\n            participant Warehouse\n            participant Shipping\n            participant Delivery\n\n            Customer->>OrderProcessing: Places order\n            OrderProcessing->>Warehouse: Requests fulfillment\n            Warehouse->>Shipping: Picks and packs goods\n            Shipping->>Delivery: Ships goods\n            Delivery->>Customer: Delivers order\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A research team submits a grant proposal, gets approval, conducts research, publishes results, and presents findings at a conference.",
+        "output": "\n        sequenceDiagram\n            participant ResearchTeam\n            participant FundingAgency\n            participant ReviewBoard\n            participant Journal\n            participant Conference\n\n            ResearchTeam->>FundingAgency: Submits grant proposal\n            FundingAgency->>ReviewBoard: Requests review\n            ReviewBoard->>FundingAgency: Approves grant\n            FundingAgency->>ResearchTeam: Provides funding\n            ResearchTeam->>Journal: Submits research findings\n            Journal->>ResearchTeam: Publishes paper\n            ResearchTeam->>Conference: Presents findings\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A university processes student applications, evaluates them, admits students, and conducts orientation.",
+        "output": "\n        sequenceDiagram\n            participant Applicant\n            participant Admissions\n            participant Evaluation\n            participant Registrar\n            participant Orientation\n\n            Applicant->>Admissions: Submits application\n            Admissions->>Evaluation: Reviews application\n            Evaluation->>Admissions: Recommends admission\n            Admissions->>Registrar: Admits student\n            Registrar->>Orientation: Schedules orientation\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A pharmaceutical company develops a new drug, conducts clinical trials, gets regulatory approval, and launches the drug in the market.",
+        "output": "\n        sequenceDiagram\n            participant R&D\n            participant ClinicalTrials\n            participant RegulatoryAgency\n            participant Marketing\n            participant Sales\n\n            R&D->>ClinicalTrials: Submits drug for trials\n            ClinicalTrials->>R&D: Reports results\n            R&D->>RegulatoryAgency: Seeks approval\n            RegulatoryAgency->>R&D: Grants approval\n            R&D->>Marketing: Initiates launch campaign\n            Marketing->>Sales: Launches drug\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A customer orders a product online, the e-commerce platform processes payment, the warehouse prepares the order, and a courier service delivers it.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant ECommercePlatform\n            participant PaymentGateway\n            participant Warehouse\n            participant CourierService\n\n            Customer->>ECommercePlatform: Places order\n            ECommercePlatform->>PaymentGateway: Processes payment\n            PaymentGateway->>ECommercePlatform: Confirms payment\n            ECommercePlatform->>Warehouse: Sends order details\n            Warehouse->>CourierService: Prepares and ships order\n            CourierService->>Customer: Delivers package\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A project manager initiates a project, allocates resources, tracks progress, and delivers the final product to the client.",
+        "output": "\n        sequenceDiagram\n            participant ProjectManager\n            participant TeamLeads\n            participant Resources\n            participant Client\n\n            ProjectManager->>TeamLeads: Allocates resources\n            TeamLeads->>Resources: Utilizes resources\n            Resources->>ProjectManager: Provides updates\n            ProjectManager->>Client: Delivers final product\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A city plans a new infrastructure project, conducts public consultations, secures funding, and begins construction.",
+        "output": "\n        sequenceDiagram\n            participant CityPlanning\n            participant Public\n            participant FinanceDepartment\n            participant ConstructionTeam\n\n            CityPlanning->>Public: Holds consultations\n            Public->>CityPlanning: Provides feedback\n            CityPlanning->>FinanceDepartment: Secures funding\n            FinanceDepartment->>CityPlanning: Approves budget\n            CityPlanning->>ConstructionTeam: Begins construction\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A retailer orders goods from a supplier, receives them, stocks inventory, and sells to customers.",
+        "output": "\n        sequenceDiagram\n            participant Retailer\n            participant Supplier\n            participant Inventory\n            participant Customer\n\n            Retailer->>Supplier: Places order\n            Supplier->>Retailer: Ships goods\n            Retailer->>Inventory: Stocks goods\n            Customer->>Retailer: Purchases products\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A healthcare provider administers a vaccination program, records data, and reports to health authorities.",
+        "output": "\n        sequenceDiagram\n            participant HealthcareProvider\n            participant Patient\n            participant DataEntry\n            participant HealthAuthorities\n\n            HealthcareProvider->>Patient: Administers vaccine\n            Patient->>DataEntry: Provides information\n            DataEntry->>HealthcareProvider: Records vaccination data\n            HealthcareProvider->>HealthAuthorities: Reports vaccination data\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A customer visits a website, adds items to the cart, checks out, and receives order confirmation.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant Website\n            participant ShoppingCart\n            participant Checkout\n            participant Confirmation\n\n            Customer->>Website: Browses items\n            Website->>ShoppingCart: Adds items to cart\n            ShoppingCart->>Checkout: Proceeds to checkout\n            Checkout->>Customer: Processes payment\n            Checkout->>Confirmation: Sends order confirmation\n            Confirmation->>Customer: Confirms order\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A publishing house reviews a manuscript, edits it, designs the cover, prints the book, and distributes it.",
+        "output": "\n        sequenceDiagram\n            participant Author\n            participant Editor\n            participant DesignTeam\n            participant Printing\n            participant Distribution\n\n            Author->>Editor: Submits manuscript\n            Editor->>Author: Provides feedback\n            Author->>Editor: Revises manuscript\n            Editor->>DesignTeam: Requests cover design\n            DesignTeam->>Editor: Delivers cover\n            Editor->>Printing: Sends final manuscript\n            Printing->>Distribution: Prints and ships books\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A tech company launches a new product, conducts marketing campaigns, gathers customer feedback, and updates the product.",
+        "output": "\n        sequenceDiagram\n            participant TechCompany\n            participant Marketing\n            participant Customer\n            participant DevelopmentTeam\n            participant SupportTeam\n\n            TechCompany->>Marketing: Launches campaign\n            Marketing->>Customer: Collects feedback\n            Customer->>SupportTeam: Provides feedback\n            SupportTeam->>DevelopmentTeam: Suggests updates\n            DevelopmentTeam->>TechCompany: Releases updates\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A government agency collects census data, analyzes it, and publishes reports for policy-making.",
+        "output": "\n        sequenceDiagram\n            participant CensusBureau\n            participant FieldAgents\n            participant DataAnalyst\n            participant PolicyMakers\n\n            CensusBureau->>FieldAgents: Conducts surveys\n            FieldAgents->>CensusBureau: Submits data\n            CensusBureau->>DataAnalyst: Analyzes data\n            DataAnalyst->>PolicyMakers: Publishes reports\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A film production company creates a movie, distributes it to theaters, and streams it online.",
+        "output": "\n        sequenceDiagram\n            participant ProductionCompany\n            participant Theaters\n            participant StreamingService\n            participant Audience\n\n            ProductionCompany->>Theaters: Distributes movie\n            Theaters->>Audience: Screens movie\n            ProductionCompany->>StreamingService: Streams movie\n            Audience->>StreamingService: Watches movie online\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A bank opens a new account, issues a debit card, and enables online banking for the customer.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant Bank\n            participant AccountOpening\n            participant CardIssuance\n            participant OnlineBanking\n\n            Customer->>Bank: Requests account opening\n            Bank->>AccountOpening: Processes application\n            AccountOpening->>Customer: Opens account\n            AccountOpening->>CardIssuance: Issues debit card\n            CardIssuance->>Customer: Sends card\n            AccountOpening->>OnlineBanking: Activates online banking\n            OnlineBanking->>Customer: Provides access\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A travel agency books flights, reserves hotel rooms, and arranges local tours for a group of tourists.",
+        "output": "\n        sequenceDiagram\n            participant TravelAgency\n            participant Airline\n            participant Hotel\n            participant TourOperator\n            participant Tourist\n\n            TravelAgency->>Airline: Books flights\n            Airline->>TravelAgency: Sends flight details\n            TravelAgency->>Hotel: Reserves rooms\n            Hotel->>TravelAgency: Confirms reservation\n            TravelAgency->>TourOperator: Arranges tours\n            TourOperator->>Tourist: Provides tour services\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A food delivery service receives an order, prepares the food, and delivers it to the customer.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant FoodApp\n            participant Restaurant\n            participant DeliveryDriver\n\n            Customer->>FoodApp: Places order\n            FoodApp->>Restaurant: Sends order details\n            Restaurant->>DeliveryDriver: Prepares order\n            DeliveryDriver->>Customer: Delivers food\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A university professor assigns a research project, students conduct research, submit reports, and receive grades.",
+        "output": "\n        sequenceDiagram\n            participant Professor\n            participant Students\n            participant ResearchTeam\n            participant GradingSystem\n\n            Professor->>Students: Assigns project\n            Students->>ResearchTeam: Conducts research\n            ResearchTeam->>Students: Provides guidance\n            Students->>Professor: Submits reports\n            Professor->>GradingSystem: Assigns grades\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A manufacturing plant receives raw materials, processes them, assembles products, and ships them to distributors.",
+        "output": "\n        sequenceDiagram\n            participant Supplier\n            participant Receiving\n            participant Processing\n            participant Assembly\n            participant Shipping\n            participant Distributor\n\n            Supplier->>Receiving: Delivers raw materials\n            Receiving->>Processing: Transfers materials\n            Processing->>Assembly: Passes processed components\n            Assembly->>Shipping: Prepares finished products\n            Shipping->>Distributor: Ships products\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A political candidate runs a campaign, holds rallies, debates opponents, and wins the election.",
+        "output": "\n        sequenceDiagram\n            participant Candidate\n            participant CampaignTeam\n            participant Voters\n            participant Opponents\n            participant ElectionCommission\n\n            Candidate->>CampaignTeam: Plans campaign\n            CampaignTeam->>Voters: Organizes rallies\n            Candidate->>Opponents: Participates in debates\n            Voters->>ElectionCommission: Casts votes\n            ElectionCommission->>Candidate: Declares winner\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: An online store manages product listings, processes customer orders, handles returns, and manages inventory.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant OnlineStore\n            participant ProductListing\n            participant OrderProcessing\n            participant Returns\n            participant Inventory\n\n            Customer->>OnlineStore: Browses products\n            OnlineStore->>ProductListing: Manages listings\n            Customer->>OrderProcessing: Places order\n            OrderProcessing->>Customer: Processes order\n            Customer->>Returns: Requests return\n            Returns->>Inventory: Restocks item\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A corporate event planner organizes a conference, books a venue, arranges speakers, and coordinates with vendors.",
+        "output": "\n        sequenceDiagram\n            participant EventPlanner\n            participant Venue\n            participant Speakers\n            participant Vendors\n\n            EventPlanner->>Venue: Books venue\n            Venue->>EventPlanner: Confirms booking\n            EventPlanner->>Speakers: Arranges speakers\n            Speakers->>EventPlanner: Confirms participation\n            EventPlanner->>Vendors: Coordinates services\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A bank processes credit card applications, issues cards, and manages customer transactions.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant Bank\n            participant CreditDepartment\n            participant CardIssuance\n            participant Transactions\n\n            Customer->>Bank: Applies for credit card\n            Bank->>CreditDepartment: Evaluates application\n            CreditDepartment->>Bank: Approves credit limit\n            Bank->>CardIssuance: Issues card\n            CardIssuance->>Customer: Sends credit card\n            Customer->>Transactions: Makes purchases\n            Transactions->>Bank: Processes transactions\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A healthcare facility manages patient records, schedules appointments, conducts tests, and updates medical history.",
+        "output": "\n        sequenceDiagram\n            participant Patient\n            participant RecordsManagement\n            participant AppointmentSystem\n            participant Lab\n            participant Doctor\n\n            Patient->>AppointmentSystem: Schedules appointment\n            AppointmentSystem->>RecordsManagement: Updates records\n            Patient->>Doctor: Attends appointment\n            Doctor->>Lab: Orders tests\n            Lab->>Doctor: Sends results\n            Doctor->>RecordsManagement: Updates medical history\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A supply chain system orders raw materials, manufactures products, stores inventory, and ships to retailers.",
+        "output": "\n        sequenceDiagram\n            participant Supplier\n            participant Manufacturer\n            participant InventoryManagement\n            participant Logistics\n            participant Retailer\n\n            Supplier->>Manufacturer: Delivers raw materials\n            Manufacturer->>InventoryManagement: Stores finished products\n            InventoryManagement->>Logistics: Arranges shipment\n            Logistics->>Retailer: Delivers products\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: An advertising agency develops a marketing campaign, creates content, and distributes it across various media channels.",
+        "output": "\n        sequenceDiagram\n            participant Client\n            participant AdAgency\n            participant CreativeTeam\n            participant MediaChannels\n\n            Client->>AdAgency: Commissions campaign\n            AdAgency->>CreativeTeam: Develops content\n            CreativeTeam->>MediaChannels: Distributes content\n            MediaChannels->>Client: Runs campaign\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A software team develops a feature, integrates it with the existing system, tests it, and deploys it to production.",
+        "output": "\n        sequenceDiagram\n            participant ProductOwner\n            participant DevelopmentTeam\n            participant IntegrationTeam\n            participant TestingTeam\n            participant Operations\n\n            ProductOwner->>DevelopmentTeam: Defines feature\n            DevelopmentTeam->>IntegrationTeam: Integrates with system\n            IntegrationTeam->>TestingTeam: Requests testing\n            TestingTeam->>Operations: Approves for deployment\n            Operations->>Production: Deploys feature\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A social media company launches a new feature, collects user feedback, and updates the feature based on feedback.",
+        "output": "\n        sequenceDiagram\n            participant ProductTeam\n            participant Users\n            participant FeedbackSystem\n            participant DevelopmentTeam\n\n            ProductTeam->>Users: Launches new feature\n            Users->>FeedbackSystem: Provides feedback\n            FeedbackSystem->>DevelopmentTeam: Suggests improvements\n            DevelopmentTeam->>ProductTeam: Updates feature\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A pharmaceutical company conducts clinical trials, submits results to regulatory agencies, and gets approval for a new drug.",
+        "output": "\n        sequenceDiagram\n            participant ResearchTeam\n            participant ClinicalTrials\n            participant RegulatoryAgency\n            participant ApprovalCommittee\n\n            ResearchTeam->>ClinicalTrials: Conducts trials\n            ClinicalTrials->>ResearchTeam: Reports results\n            ResearchTeam->>RegulatoryAgency: Submits findings\n            RegulatoryAgency->>ApprovalCommittee: Reviews and approves\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A retail chain launches a new store, hires staff, stocks inventory, and opens for business.",
+        "output": "\n        sequenceDiagram\n            participant RetailChain\n            participant HR\n            participant InventoryTeam\n            participant Customers\n\n            RetailChain->>HR: Hires staff\n            HR->>RetailChain: Recruits and trains\n            RetailChain->>InventoryTeam: Stocks store\n            InventoryTeam->>Customers: Opens for business\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: An automotive company recalls a defective vehicle, repairs it, and returns it to the customer.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant AutoCompany\n            participant ServiceCenter\n            participant RepairTeam\n\n            AutoCompany->>Customer: Issues recall notice\n            Customer->>ServiceCenter: Schedules repair\n            ServiceCenter->>RepairTeam: Fixes defect\n            RepairTeam->>Customer: Returns vehicle\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A government agency issues a new regulation, businesses comply, and the agency monitors adherence.",
+        "output": "\n        sequenceDiagram\n            participant GovAgency\n            participant Business\n            participant ComplianceDept\n\n            GovAgency->>Business: Issues regulation\n            Business->>ComplianceDept: Ensures compliance\n            ComplianceDept->>GovAgency: Reports adherence\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A car rental service processes a booking, prepares the vehicle, and hands it over to the customer.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant RentalService\n            participant FleetManagement\n            participant VehiclePreparation\n\n            Customer->>RentalService: Books vehicle\n            RentalService->>FleetManagement: Assigns vehicle\n            FleetManagement->>VehiclePreparation: Prepares car\n            VehiclePreparation->>Customer: Hands over vehicle\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A social science researcher designs a study, collects data, analyzes results, and publishes a paper.",
+        "output": "\n        sequenceDiagram\n            participant Researcher\n            participant StudyParticipants\n            participant DataAnalyst\n            participant Journal\n\n            Researcher->>StudyParticipants: Conducts study\n            StudyParticipants->>Researcher: Provides data\n            Researcher->>DataAnalyst: Analyzes results\n            DataAnalyst->>Researcher: Reports findings\n            Researcher->>Journal: Publishes paper\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A medical team receives a patient in the emergency room, diagnoses the condition, treats the patient, and updates the medical record.",
+        "output": "\n        sequenceDiagram\n            participant Patient\n            participant ERTeam\n            participant DiagnosisTeam\n            participant TreatmentTeam\n            participant MedicalRecords\n\n            Patient->>ERTeam: Admitted to ER\n            ERTeam->>DiagnosisTeam: Diagnoses condition\n            DiagnosisTeam->>TreatmentTeam: Prescribes treatment\n            TreatmentTeam->>MedicalRecords: Updates records\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A news agency covers an event, edits the footage, and broadcasts it on television.",
+        "output": "\n        sequenceDiagram\n            participant Reporter\n            participant Editor\n            participant BroadcastTeam\n            participant Viewers\n\n            Reporter->>Editor: Sends footage\n            Editor->>BroadcastTeam: Finalizes content\n            BroadcastTeam->>Viewers: Broadcasts event\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A restaurant takes an order, prepares the food, and serves it to the customer.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant Waiter\n            participant Kitchen\n            participant Cashier\n\n            Customer->>Waiter: Places order\n            Waiter->>Kitchen: Sends order to kitchen\n            Kitchen->>Waiter: Prepares food\n            Waiter->>Customer: Serves food\n            Customer->>Cashier: Pays bill\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A hotel processes a booking, checks in the guest, provides services, and checks out the guest.",
+        "output": "\n        sequenceDiagram\n            participant Guest\n            participant BookingSystem\n            participant Reception\n            participant Housekeeping\n            participant Billing\n\n            Guest->>BookingSystem: Makes reservation\n            BookingSystem->>Reception: Confirms booking\n            Guest->>Reception: Checks in\n            Reception->>Housekeeping: Provides services\n            Guest->>Billing: Checks out\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: An online learning platform registers a student, enrolls them in a course, delivers lessons, and assesses performance.",
+        "output": "\n        sequenceDiagram\n            participant Student\n            participant LearningPlatform\n            participant EnrollmentSystem\n            participant Instructor\n            participant Assessment\n\n            Student->>LearningPlatform: Registers on platform\n            LearningPlatform->>EnrollmentSystem: Enrolls in course\n            EnrollmentSystem->>Instructor: Informs about new student\n            Instructor->>LearningPlatform: Delivers lessons\n            LearningPlatform->>Assessment: Conducts assessments\n            Assessment->>Student: Provides feedback\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A construction company wins a contract, designs the building, constructs it, and hands it over to the client.",
+        "output": "\n        sequenceDiagram\n            participant ConstructionCompany\n            participant Client\n            participant DesignTeam\n            participant ConstructionTeam\n            participant Inspection\n\n            Client->>ConstructionCompany: Awards contract\n            ConstructionCompany->>DesignTeam: Designs building\n            DesignTeam->>ConstructionTeam: Provides plans\n            ConstructionTeam->>Inspection: Completes construction\n            Inspection->>Client: Passes inspection\n            ConstructionTeam->>Client: Hands over building\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A fashion designer creates a new collection, showcases it at a fashion show, and sells it to buyers.",
+        "output": "\n        sequenceDiagram\n            participant Designer\n            participant ProductionTeam\n            participant FashionShow\n            participant Buyers\n\n            Designer->>ProductionTeam: Designs collection\n            ProductionTeam->>Designer: Produces garments\n            Designer->>FashionShow: Showcases collection\n            Buyers->>Designer: Places orders\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: An educational institution hires a new teacher, assigns classes, and evaluates their performance.",
+        "output": "\n        sequenceDiagram\n            participant Institution\n            participant HR\n            participant Teacher\n            participant Students\n            participant Evaluation\n\n            Institution->>HR: Recruits teacher\n            HR->>Teacher: Onboards new hire\n            Institution->>Teacher: Assigns classes\n            Teacher->>Students: Teaches classes\n            Evaluation->>Institution: Assesses performance\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A tech startup develops a mobile app, tests it, launches it on app stores, and gathers user feedback.",
+        "output": "\n        sequenceDiagram\n            participant Startup\n            participant DevelopmentTeam\n            participant TestingTeam\n            participant AppStore\n            participant Users\n\n            Startup->>DevelopmentTeam: Develops app\n            DevelopmentTeam->>TestingTeam: Submits for testing\n            TestingTeam->>DevelopmentTeam: Reports issues\n            DevelopmentTeam->>AppStore: Launches app\n            AppStore->>Users: Provides access\n            Users->>Startup: Gives feedback\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A courier company receives a package, sorts it, transports it, and delivers it to the recipient.",
+        "output": "\n        sequenceDiagram\n            participant Sender\n            participant CourierCompany\n            participant SortingFacility\n            participant DeliveryDriver\n            participant Recipient\n\n            Sender->>CourierCompany: Hands over package\n            CourierCompany->>SortingFacility: Sorts package\n            SortingFacility->>DeliveryDriver: Assigns for delivery\n            DeliveryDriver->>Recipient: Delivers package\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A telecommunication company installs a new internet connection, configures the router, and activates the service for the customer.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant TelecomCompany\n            participant Technician\n            participant Router\n            participant ActivationTeam\n\n            Customer->>TelecomCompany: Requests new connection\n            TelecomCompany->>Technician: Schedules installation\n            Technician->>Router: Configures equipment\n            Technician->>ActivationTeam: Requests activation\n            ActivationTeam->>Customer: Activates service\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: An e-commerce platform launches a new product line, markets it, and manages customer orders.",
+        "output": "\n        sequenceDiagram\n            participant ECommercePlatform\n            participant Marketing\n            participant Customers\n            participant OrderManagement\n\n            ECommercePlatform->>Marketing: Launches product line\n            Marketing->>Customers: Promotes product\n            Customers->>OrderManagement: Places orders\n            OrderManagement->>Customers: Processes orders\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: An online bank processes a loan application, approves the loan, and disburses the funds.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant OnlineBank\n            participant LoanProcessing\n            participant ApprovalTeam\n            participant Disbursement\n\n            Customer->>OnlineBank: Submits loan application\n            OnlineBank->>LoanProcessing: Reviews application\n            LoanProcessing->>ApprovalTeam: Seeks approval\n            ApprovalTeam->>Disbursement: Approves loan\n            Disbursement->>Customer: Disburses funds\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A government department launches a public awareness campaign, distributes informational materials, and tracks its impact.",
+        "output": "\n        sequenceDiagram\n            participant Government\n            participant CampaignTeam\n            participant Public\n            participant ImpactAssessment\n\n            Government->>CampaignTeam: Launches campaign\n            CampaignTeam->>Public: Distributes materials\n            Public->>ImpactAssessment: Provides feedback\n            ImpactAssessment->>Government: Tracks impact\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: An airport handles flight arrivals, manages baggage, and facilitates passenger transfers.",
+        "output": "\n        sequenceDiagram\n            participant Flight\n            participant Airport\n            participant BaggageHandling\n            participant Passengers\n            participant TransferService\n\n            Flight->>Airport: Arrives at gate\n            Airport->>BaggageHandling: Manages baggage\n            BaggageHandling->>Passengers: Delivers baggage\n            Airport->>TransferService: Facilitates transfers\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A law firm takes on a new client, conducts legal research, files a lawsuit, and represents the client in court.",
+        "output": "\n        sequenceDiagram\n            participant Client\n            participant LawFirm\n            participant ResearchTeam\n            participant Court\n\n            Client->>LawFirm: Engages services\n            LawFirm->>ResearchTeam: Conducts research\n            ResearchTeam->>LawFirm: Provides findings\n            LawFirm->>Court: Files lawsuit\n            Court->>LawFirm: Schedules hearing\n            LawFirm->>Client: Represents in court\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A recruitment agency sources candidates, conducts interviews, and places them in jobs.",
+        "output": "\n        sequenceDiagram\n            participant Employer\n            participant RecruitmentAgency\n            participant Candidates\n            participant Interviewer\n            participant HR\n\n            Employer->>RecruitmentAgency: Requests candidates\n            RecruitmentAgency->>Candidates: Sources candidates\n            Candidates->>Interviewer: Attends interviews\n            Interviewer->>HR: Selects candidates\n            HR->>Employer: Places candidates\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A hospital schedules a surgery, prepares the operating room, performs the surgery, and monitors post-operative recovery.",
+        "output": "\n        sequenceDiagram\n            participant Patient\n            participant SurgeryScheduling\n            participant OperatingRoom\n            participant SurgeryTeam\n            participant RecoveryRoom\n\n            Patient->>SurgeryScheduling: Schedules surgery\n            SurgeryScheduling->>OperatingRoom: Prepares room\n            SurgeryTeam->>Patient: Performs surgery\n            OperatingRoom->>RecoveryRoom: Transfers patient\n            RecoveryRoom->>Patient: Monitors recovery\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A charity organization launches a fundraising campaign, receives donations, and distributes aid to beneficiaries.",
+        "output": "\n        sequenceDiagram\n            participant Charity\n            participant Donors\n            participant FundraisingTeam\n            participant Beneficiaries\n\n            Charity->>FundraisingTeam: Launches campaign\n            FundraisingTeam->>Donors: Requests donations\n            Donors->>Charity: Sends funds\n            Charity->>Beneficiaries: Distributes aid\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: An energy company sets up a new solar plant, connects it to the grid, and supplies electricity to consumers.",
+        "output": "\n        sequenceDiagram\n            participant EnergyCompany\n            participant ConstructionTeam\n            participant GridOperator\n            participant Consumers\n\n            EnergyCompany->>ConstructionTeam: Builds solar plant\n            ConstructionTeam->>GridOperator: Connects to grid\n            GridOperator->>Consumers: Supplies electricity\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A sports team recruits new players, conducts training sessions, and participates in a tournament.",
+        "output": "\n        sequenceDiagram\n            participant TeamManager\n            participant Recruiter\n            participant Players\n            participant Coaches\n            participant TournamentOrganizers\n\n            TeamManager->>Recruiter: Identifies players\n            Recruiter->>Players: Recruits players\n            TeamManager->>Coaches: Plans training\n            Coaches->>Players: Conducts training\n            TeamManager->>TournamentOrganizers: Registers team\n            Players->>TournamentOrganizers: Participates in matches\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A healthcare system manages patient admissions, provides treatment, and discharges patients.",
+        "output": "\n        sequenceDiagram\n            participant Patient\n            participant AdmissionDesk\n            participant TreatmentTeam\n            participant Billing\n            participant DischargeDesk\n\n            Patient->>AdmissionDesk: Admits to hospital\n            AdmissionDesk->>TreatmentTeam: Provides treatment plan\n            TreatmentTeam->>Billing: Sends treatment costs\n            Billing->>Patient: Processes payment\n            DischargeDesk->>Patient: Discharges from hospital\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A music label signs a new artist, records an album, and releases it on streaming platforms.",
+        "output": "\n        sequenceDiagram\n            participant Artist\n            participant MusicLabel\n            participant RecordingStudio\n            participant StreamingPlatforms\n            participant Listeners\n\n            MusicLabel->>Artist: Signs contract\n            Artist->>RecordingStudio: Records album\n            RecordingStudio->>MusicLabel: Delivers album\n            MusicLabel->>StreamingPlatforms: Releases album\n            Listeners->>StreamingPlatforms: Streams music\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A financial institution offers investment advice, manages portfolios, and reports on performance to clients.",
+        "output": "\n        sequenceDiagram\n            participant Client\n            participant FinancialAdvisor\n            participant PortfolioManager\n            participant ReportingTeam\n\n            Client->>FinancialAdvisor: Seeks investment advice\n            FinancialAdvisor->>PortfolioManager: Allocates investments\n            PortfolioManager->>ReportingTeam: Tracks performance\n            ReportingTeam->>Client: Provides reports\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A supermarket restocks shelves, manages checkout, and processes payments for customers.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant Supermarket\n            participant StockRoom\n            participant Cashier\n            participant PaymentGateway\n\n            Supermarket->>StockRoom: Restocks shelves\n            Customer->>Supermarket: Selects products\n            Customer->>Cashier: Proceeds to checkout\n            Cashier->>PaymentGateway: Processes payment\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A gaming company develops a new game, tests it, launches it, and supports players with updates.",
+        "output": "\n        sequenceDiagram\n            participant GameStudio\n            participant TestingTeam\n            participant Marketing\n            participant Players\n            participant SupportTeam\n\n            GameStudio->>TestingTeam: Develops game\n            TestingTeam->>GameStudio: Reports bugs\n            GameStudio->>Marketing: Launches game\n            Marketing->>Players: Promotes game\n            Players->>SupportTeam: Requests support\n            SupportTeam->>GameStudio: Suggests updates\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A ride-sharing app connects drivers with passengers, tracks the ride, and processes payments.",
+        "output": "\n        sequenceDiagram\n            participant Passenger\n            participant RideSharingApp\n            participant Driver\n            participant PaymentSystem\n\n            Passenger->>RideSharingApp: Requests ride\n            RideSharingApp->>Driver: Assigns ride\n            Driver->>Passenger: Picks up passenger\n            RideSharingApp->>Passenger: Tracks ride\n            Passenger->>PaymentSystem: Pays for ride\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A cybersecurity firm detects a threat, analyzes it, and deploys countermeasures to protect client data.",
+        "output": "\n        sequenceDiagram\n            participant Client\n            participant CyberSecurity\n            participant ThreatDetection\n            participant ResponseTeam\n            participant ClientData\n\n            Client->>CyberSecurity: Engages security services\n            ThreatDetection->>CyberSecurity: Detects threat\n            CyberSecurity->>ResponseTeam: Analyzes and deploys countermeasures\n            ResponseTeam->>ClientData: Protects data\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A telecom company rolls out a 5G network, upgrades infrastructure, and provides services to customers.",
+        "output": "\n        sequenceDiagram\n            participant TelecomCompany\n            participant NetworkTeam\n            participant Infrastructure\n            participant Customers\n\n            TelecomCompany->>NetworkTeam: Initiates 5G rollout\n            NetworkTeam->>Infrastructure: Upgrades network\n            Infrastructure->>TelecomCompany: Confirms upgrade\n            TelecomCompany->>Customers: Provides 5G services\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A robotics company designs a new robot, prototypes it, conducts testing, and begins mass production.",
+        "output": "\n        sequenceDiagram\n            participant RoboticsCompany\n            participant DesignTeam\n            participant Prototyping\n            participant TestingTeam\n            participant Production\n\n            RoboticsCompany->>DesignTeam: Designs new robot\n            DesignTeam->>Prototyping: Builds prototype\n            Prototyping->>TestingTeam: Conducts testing\n            TestingTeam->>Production: Approves for mass production\n            Production->>RoboticsCompany: Begins production\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A cosmetics brand develops a new product, tests it for safety, and markets it globally.",
+        "output": "\n        sequenceDiagram\n            participant CosmeticsBrand\n            participant R&D\n            participant TestingTeam\n            participant Marketing\n            participant GlobalDistributors\n\n            CosmeticsBrand->>R&D: Develops new product\n            R&D->>TestingTeam: Tests for safety\n            TestingTeam->>CosmeticsBrand: Approves product\n            CosmeticsBrand->>Marketing: Plans global campaign\n            Marketing->>GlobalDistributors: Distributes product\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: An automotive service center schedules a vehicle for maintenance, performs the service, and returns the vehicle to the customer.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant ServiceCenter\n            participant MaintenanceTeam\n            participant Billing\n\n            Customer->>ServiceCenter: Schedules maintenance\n            ServiceCenter->>MaintenanceTeam: Assigns service\n            MaintenanceTeam->>Billing: Completes service\n            Billing->>Customer: Processes payment\n            MaintenanceTeam->>Customer: Returns vehicle\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A city council proposes a new zoning law, holds public hearings, and implements the law.",
+        "output": "\n        sequenceDiagram\n            participant CityCouncil\n            participant Public\n            participant LegalTeam\n            participant Enforcement\n\n            CityCouncil->>Public: Proposes new zoning law\n            Public->>CityCouncil: Participates in hearings\n            CityCouncil->>LegalTeam: Drafts final law\n            LegalTeam->>Enforcement: Implements law\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A university manages applications for a PhD program, reviews them, and admits students.",
+        "output": "\n        sequenceDiagram\n            participant Applicant\n            participant AdmissionsCommittee\n            participant ReviewBoard\n            participant University\n\n            Applicant->>University: Submits application\n            University->>ReviewBoard: Sends for review\n            ReviewBoard->>AdmissionsCommittee: Recommends admissions\n            AdmissionsCommittee->>University: Admits students\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A postal service processes incoming mail, sorts it, and delivers it to recipients.",
+        "output": "\n        sequenceDiagram\n            participant Sender\n            participant PostalService\n            participant SortingFacility\n            participant MailCarrier\n            participant Recipient\n\n            Sender->>PostalService: Sends mail\n            PostalService->>SortingFacility: Sorts mail\n            SortingFacility->>MailCarrier: Assigns for delivery\n            MailCarrier->>Recipient: Delivers mail\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A luxury car brand customizes a vehicle, assembles it, and delivers it to the customer.",
+        "output": "\n        sequenceDiagram\n            participant Customer\n            participant SalesConsultant\n            participant DesignTeam\n            participant AssemblyLine\n            participant DeliveryService\n\n            Customer->>SalesConsultant: Requests customization\n            SalesConsultant->>DesignTeam: Finalizes design\n            DesignTeam->>AssemblyLine: Sends to production\n            AssemblyLine->>DeliveryService: Prepares for delivery\n            DeliveryService->>Customer: Delivers custom car\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A technology firm develops an AI model, trains it on data, and deploys it for business use.",
+        "output": "\n        sequenceDiagram\n            participant TechFirm\n            participant AIResearchTeam\n            participant DataEngineers\n            participant BusinessUnit\n\n            TechFirm->>AIResearchTeam: Develops AI model\n            AIResearchTeam->>DataEngineers: Provides data\n            DataEngineers->>AIResearchTeam: Trains model\n            AIResearchTeam->>BusinessUnit: Deploys model\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A logistics company optimizes routes, loads cargo, and delivers shipments on schedule.",
+        "output": "\n        sequenceDiagram\n            participant LogisticsCompany\n            participant RoutePlanner\n            participant LoadingDock\n            participant DeliveryDriver\n            participant Customer\n\n            LogisticsCompany->>RoutePlanner: Optimizes routes\n            RoutePlanner->>LoadingDock: Loads cargo\n            LoadingDock->>DeliveryDriver: Assigns delivery\n            DeliveryDriver->>Customer: Delivers shipment\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A non-profit organization organizes a charity auction, receives bids, and awards items to the highest bidders.",
+        "output": "\n        sequenceDiagram\n            participant NonProfit\n            participant Auctioneer\n            participant Bidders\n            participant Winners\n\n            NonProfit->>Auctioneer: Organizes auction\n            Bidders->>Auctioneer: Places bids\n            Auctioneer->>Winners: Awards items\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A real estate developer acquires land, designs a housing project, builds homes, and sells them to buyers.",
+        "output": "\n        sequenceDiagram\n            participant Developer\n            participant LandOwner\n            participant Architect\n            participant ConstructionTeam\n            participant Buyers\n\n            Developer->>LandOwner: Acquires land\n            Developer->>Architect: Designs housing project\n            Architect->>ConstructionTeam: Provides plans\n            ConstructionTeam->>Developer: Builds homes\n            Buyers->>Developer: Purchases homes\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A government conducts a national census, collects data, and publishes population statistics.",
+        "output": "\n        sequenceDiagram\n            participant Government\n            participant CensusBureau\n            participant FieldAgents\n            participant DataAnalysts\n            participant Public\n\n            Government->>CensusBureau: Organizes census\n            CensusBureau->>FieldAgents: Collects data\n            FieldAgents->>DataAnalysts: Submits data\n            DataAnalysts->>Government: Analyzes results\n            Government->>Public: Publishes statistics\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A cloud service provider provisions servers, deploys applications, and monitors performance for clients.",
+        "output": "\n        sequenceDiagram\n            participant Client\n            participant CloudProvider\n            participant ServerProvisioning\n            participant DeploymentTeam\n            participant Monitoring\n\n            Client->>CloudProvider: Requests servers\n            CloudProvider->>ServerProvisioning: Provisions servers\n            ServerProvisioning->>DeploymentTeam: Deploys applications\n            Monitoring->>Client: Monitors performance\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: An airline manages flight bookings, processes check-in, and handles baggage for passengers.",
+        "output": "\n        sequenceDiagram\n            participant Passenger\n            participant BookingSystem\n            participant CheckIn\n            participant BaggageHandling\n\n            Passenger->>BookingSystem: Books flight\n            BookingSystem->>CheckIn: Confirms booking\n            Passenger->>CheckIn: Checks in\n            CheckIn->>BaggageHandling: Sends baggage\n        "
+    },
+    {
+        "instruction": "Create a Mermaid JS UML sequence diagram for the following scenario: A government agency monitors air quality, analyzes data, and enforces environmental regulations.",
+        "output": "\n        sequenceDiagram\n            participant GovernmentAgency\n            participant MonitoringStation\n            participant DataAnalyst\n            participant EnvironmentalRegulations\n\n            MonitoringStation->>GovernmentAgency: Sends air quality data\n            GovernmentAgency->>DataAnalyst: Analyzes data\n            DataAnalyst->>GovernmentAgency: Reports findings\n            GovernmentAgency->>EnvironmentalRegulations: Enforces regulations\n        "
+    }
+]

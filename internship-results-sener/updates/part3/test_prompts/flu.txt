@@ -1,0 +1,17 @@
+Key Topic: The goal of this study is to generate IDEAS for modelling the spread of an epidemic flu. The epidemic flu model simulates the dynamics of disease transmission among individuals in a grid-like environment. Each individual can be in one of several states: Susceptible, Infected, or Recovered. Susceptible individuals are at risk of contracting the flu when they come into contact with infected individuals. Infected individuals spread the flu to neighbouring susceptible individuals during interactions, but their infectious period ends after a set duration, at which point they either recover or are removed from the population. Recovered individuals gain immunity and no longer spread or contract the flu. The model accounts for various parameters, including transmission probability, recovery rate, and initial population density, providing insights into the flu's dynamics and potential mitigation strategies.
+
+Key Research Design: Exploratory
+
+Key Domain: Epidemiological Modelling
+
+Key Specialisation: Disease Dynamics
+
+Key Domain Related Role: Epidemiologist
+
+
+
+
+
+
+    
+	

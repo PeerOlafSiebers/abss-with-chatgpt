@@ -1,0 +1,7 @@
+Key Topic: The goal of this study is to generate IDEAS for: exploring the dynamics of the Bass Diffusion Model. The Bass Diffusion Model simulates the adoption of a new product or innovation within a population, considering two key mechanisms: innovation and imitation. The model operates within a market where potential adopters can transition to adopters based on external influences (e.g., advertising) and internal influences (e.g., word-of-mouth). At each simulation step, individuals assess their likelihood of adoption based on the probability of innovation and imitation. The adoption rate evolves dynamically, reflecting the interplay between early adopters influenced by external factors and followers driven by peer interactions. This process contributes to the overall understanding of diffusion patterns and market penetration over time.
+
+Key Research Design: Exploratory
+
+Key Domain: Bass Diffusion Modeling
+
+Key Specialisation: Innovation Diffusion Dynamics

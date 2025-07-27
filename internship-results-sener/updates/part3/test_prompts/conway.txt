@@ -1,0 +1,9 @@
+Key Topic: The goal of this study is to generate IDEAS for exploring the dynamics and patterns emerging from Conway's Game of Life. The Game of Life is a cellular automaton simulation set on a grid-like environment, where each cell can either be alive or dead. The state of each cell evolves over discrete time steps according to a set of simple rules based on the states of its eight neighbouring cells. These two rules are: 1) A live cell survives if it has 2 or 3 live neighbours; otherwise, it dies from loneliness or overcrowding. 2) A dead cell becomes alive if it has exactly 3 live neighbours, representing reproduction. The interplay of these rules leads to complex behaviours and patterns. The model explores self-organisation, emergence, and the impact of initial configurations on long-term dynamics, offering insights into the fundamental principles of life, growth, and decay in artificial systems.
+
+Key Research Design: Exploratory
+
+Key Domain: Cellular Automata Modelling
+
+Key Specialisation: Emergent Dynamics
+
+Key Domain Related Role: Biologist

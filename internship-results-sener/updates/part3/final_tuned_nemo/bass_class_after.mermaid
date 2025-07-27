@@ -1,0 +1,128 @@
+classDiagram
+
+class ArtificialLab {
+  - potentialAdopters: PotentialAdopter[]
+  - earlyAdopters: EarlyAdopter[]
+  - priceSensitiveConsumers: PriceSensitiveConsumer[]
+  - influencers: Influencer[]
+  - vrDevices: VRDevice[]
+  - complementaryGoods: ComplementaryGood[]
+
+  - advertisingStrategy: AdvertisingStrategy
+  - devicePricePoint: PricePointCategory
+  - complementaryGoodsAvailability: float  
+
+  - marketPenetrationRate: float           
+  - averageTimeToAdoption: float           
+  - userSatisfactionIndex: float           
+  - socialInclusionScore: float            
+  - priceElasticityOfDemand: float         
+  - adoptionLagTime: float                 
+  - complementaryGoodsAdoptionRatio: float 
+  - complementaryServicesUtilRate: float   
+
+  + calculateMPR(): float
+  + calculateTTA(): float
+  + calculateUSI(): float
+  + calculateSIS(): float
+  + calculatePED(): float
+  + calculateALT(): float
+  + calculateCGAR(): float
+  + calculateCSUR(): float
+  + verifyPriceSensitivityHypothesis(): bool
+  + verifyComplementaryGoodsHypothesis(): bool
+}
+
+class PotentialAdopter {
+  - budget: float
+  - priceSensitivityLevel: int
+  + compareVRDevicePrices(d1: VRDevice, d2: VRDevice): void
+  + readVRDeviceReviews(device: VRDevice): void
+}
+
+class EarlyAdopter {
+  - socialMediaFollowers: int
+  + exploreNewVRExperiences(exp: VRExperience): void
+  + shareVRExperiencesOnSocialMedia(exp: VRExperience): void
+}
+
+class PriceSensitiveConsumer {
+  - maxBudget: float
+  + findAffordableVRBundles(vrs: VRDevice[], goods: ComplementaryGood[]): void
+  + compareDeviceWithGamingConsole(device: VRDevice, consolePrice: float): void
+}
+
+class Influencer {
+  - influenceScore: float
+  - audienceSize: int
+  + collaborateWithVRManufacturers(mfr: VRManufacturer): void
+  + reviewAndPromoteVRDevices(device: VRDevice): void
+}
+
+class VRDevice {
+  - modelName: string
+  - price: float
+  - features: string[]
+  - reviews: Review[]
+  - pricePoint: PricePointCategory
+  + offerDiscount(percent: float): void
+}
+
+class ComplementaryGood {
+  - name: string
+  - price: float
+  - availabilityPercent: float
+  + bundleWithVRDevice(device: VRDevice): void
+}
+
+class VRExperience {
+  - name: string
+  - genre: string
+}
+
+class Review {
+  - rating: int
+  - comment: string
+}
+
+class VRManufacturer {
+  - name: string
+  - headquarters: string
+}
+
+class AdvertisingStrategy {
+  <<enumeration>>
+  Targeted
+  MassMarket
+}
+
+class PricePointCategory {
+  <<enumeration>>
+  Low
+  Medium
+  High
+}
+
+class PolicyIntervention {
+  <<enumeration>>
+  NoPolicy
+  InclusivityFocused
+}
+
+ArtificialLab *-- PotentialAdopter : manages
+ArtificialLab *-- EarlyAdopter : manages
+ArtificialLab *-- PriceSensitiveConsumer : manages
+ArtificialLab *-- Influencer : manages
+ArtificialLab *-- VRDevice : owns
+ArtificialLab *-- ComplementaryGood : owns
+
+Influencer --> VRManufacturer : collaborates_with
+VRDevice o-- Review : has_reviews
+VRDevice *-- ComplementaryGood  : includes
+PotentialAdopter --> VRDevice : price_comparison
+EarlyAdopter --> VRExperience : tries_out
+EarlyAdopter --> VRDevice : shares_experience_of
+PriceSensitiveConsumer --> VRDevice : compare_price
+PriceSensitiveConsumer --> ComplementaryGood : bundle_search
+Influencer --> VRDevice : promotes
+ComplementaryGood --> VRDevice : enhances

@@ -1,0 +1,15 @@
+sb_topaloglu1@instance-20240729-100526:~$ ollama run fine-tuned-model-2:latest
+>>> Step-by-step, work through the following task list in the given order during the entire con
+... versation. Got  it? Say "yes" or say "no".
+['task', ['create a new species called "human" from the basic template, and add an action 
+"talk" to it.', 'define the action "talk" so that when it is executed in a specific 
+location named "town", a message appears on the console of the user interface: "The human 
+talks in town".', 'add another action named "walk" to the species "human", with no 
+argument and with the following code snippet inside it : "do walk speed: 0.5;"', 'define 
+an initialization block that will be executed when a new human is created, which consists 
+of positioning the agent at random within a specific polygon called "town"', 'define an 
+experiment named "experiment" that contains:', 'a display named "main_display" that has a 
+camera looking down on the "town" polygon.', 'an output device called "console" for 
+displaying messages in the console window.', 'launch this simulation by running the main 
+experiment "experiment", where we will see humans wandering around and speaking in 
+town.'],

@@ -1,0 +1,26 @@
+stateDiagram-v2
+    [*] --> Foraging
+    Foraging --> Evading: Predator Sighted
+    Foraging --> Resting: Low Risk
+    Evading --> Resting: Predator Lost
+    Evading --> Foraging: Predator Gone
+
+    state Foraging {
+        [*] --> Grazing
+        Grazing --> SeekingShelter: Predator Sighted
+        SeekingShelter --> Grazing: Predator Gone
+
+            note left of Grazing : Consuming vegetation and resources.
+
+
+            note left of SeekingShelter : Finding a safe place to hide.
+
+    }
+
+        note left of Evading : Actively avoiding predators.
+
+
+        note left of Resting : Conserving energy and avoiding detection.
+
+    Evading --> [*]: Hunted by Predator
+    Foraging --> [*]: Food Not Found

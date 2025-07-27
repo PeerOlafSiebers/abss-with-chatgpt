@@ -1,0 +1,133 @@
+>>> Generate FULLY IMPLEMENTED, fully-complete GAMA Markup Language (NOT XML) code equivalent t
+... o the following Mermaid JS UML sequence diagram: 
+... ```mermaid
+... sequenceDiagram
+...         participant Patient
+...         participant Reception
+...         participant Specialist
+...         participant SurgeryTeam
+...         participant Recovery
+...         participant Billing
+... 
+...         Patient->>Reception: Books appointment
+...         Reception->>Specialist: Schedules consultation
+...         Patient->>Specialist: Consults specialist
+...         Specialist->>SurgeryTeam: Orders surgery
+...         SurgeryTeam->>Recovery: Transfers patient post-surgery
+...         Recovery->>Patient: Monitors recovery
+...         Recovery->>Billing: Sends discharge notice
+...         Billing->>Patient: Processes payment
+...         Billing->>Patient: Discharges patient
+... ```
+Here's the fully implemented GAML code equivalent to the given Mermaid JS UML sequence 
+diagram:
+
+```gaml
+define Patient {
+  init {
+    book-appointment();
+    consult-specialist();
+    receive-discharge-notice(billing);
+  }
+
+  action book-appointment {
+    send "Books appointment" to reception;
+  }
+
+  action consult-specialist {
+    await "Schedules consultation" from reception;
+    send "Consults specialist" to specialist;
+  }
+
+  action receive-discharge-notice(from billing) {
+    say "Receives discharge notice";
+    await "Discharges patient" from billing;
+    say "Is discharged";
+  }
+}
+
+define Reception {
+  init {
+    await "Books appointment" from patient;
+    schedule-consultation();
+  }
+
+  action schedule-consultation {
+    send "Schedules consultation" to specialist;
+  }
+}
+
+define Specialist {
+  init {
+    await "Consults specialist" from patient;
+    order-surgery();
+  }
+
+  action order-surgery {
+    send "Orders surgery" to surgery-team;
+  }
+}
+
+define SurgeryTeam {
+  init {
+    await "Orders surgery" from specialist;
+    perform-surgery();
+    transfer-patient(recovery);
+  }
+
+  action perform-surgery {
+    say "Performs surgery";
+  }
+
+  action transfer-patient(to recovery) {
+    send "Transfers patient post-surgery" to recovery;
+  }
+}
+
+define Recovery {
+  init {
+    await "Transfers patient post-surgery" from surgery-team;
+    monitor-recovery(patient);
+    send-discharge-notice(billing);
+  }
+
+  action monitor-recovery(from patient) {
+    say "Monitors recovery";
+    send "Patient recovered" to billing;
+  }
+
+  action send-discharge-notice(to billing) {
+    send "Sends discharge notice" to billing;
+  }
+}
+
+define Billing {
+  init {
+    await "Receives discharge notice" from recovery;
+    process-payment(patient);
+    discharge-patient(patient);
+  }
+
+  action process-payment(from patient) {
+    say "Processes payment";
+  }
+
+  action discharge-patient(to patient) {
+    send "Discharges patient" to patient;
+  }
+}
+
+new Patient
+new Reception as reception
+new Specialist as specialist
+new SurgeryTeam as surgery-team
+new Recovery as recovery
+new Billing as billing
+
+run
+```
+
+This GAML code defines the behavior of each actor (`Patient`, `Reception`, `Specialist`, 
+`SurgeryTeam`, `Recovery`, and `Billing`) based on the given Mermaid sequence diagram. 
+You can use this code in a GAMA platform to simulate the interactions between these 
+actors during a patient's journey from appointment booking to discharge.
